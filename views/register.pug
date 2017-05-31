@@ -1,0 +1,53 @@
+extends ../layouts/foscl
+
+append body
+  .container
+    .row
+      .col-lg-12
+        h1 Registration form
+    .row-fluid
+      .col-lg-8
+        .span8(id="maincontent") 
+          form.form-horizontal(id="registration-form")
+          p Complete the Form and click submit
+          br
+          .form-control-group
+            label.control-label(for="name") Your Name
+            .controls
+              input.input-xlarge(type="text" name="name" id="name")     
+          .form-control-group
+            label.control-label(for="name") User Name
+            .controls
+              input.input-xlarge(type="text" name="username" id="username")
+          .form-control-group
+            label.control-label(for="name") Password
+            .controls
+              input.input-xlarge(type="password" name="password" id="password")
+          .form-control-group
+            label.control-label(for="name") Retype Password
+            .controls
+              input.input-xlarge(type="password" name="confirm_password" id="confirm_password")
+          .form-control-group
+            label.control-label(for="email") Email Address
+            .controls
+              input.input-xlarge(type="text" name="email" id="email")
+          .form-control-group
+            label.control-label(for="message") Your Address
+            .controls
+              textarea.input-xlarge(name="address" id="address" rows="3")
+          .form-control-group
+            label.control-label(for="message") Please agree to our #[a(href="siteterms") terms and conditions]
+            .controls
+              input.checkbox(id="agree" type="checkbox" name="agree")
+          .form-actions
+            button.btn.btn-success.btn-large(type="submit") Register
+            button.btn(type="reset") Cancel
+
+  script(src="../js/jquery.min.js")
+  script(src="../js/jquery.validate.min.js")
+  script(src="../js/fmscript.js")
+  script(type='text/javascript').
+    addEventListener('load', prettyPrint, false);
+      $(document).ready(function(){
+        $('pre').addClass('prettyprint linenums');
+      });
