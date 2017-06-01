@@ -1,9 +1,9 @@
 var config = {};
 config.smtp ={
   user : 'no-reply@friendsofsonningcommonlibrary.org.uk',
-  password : 'my-secret-password'
+  password : 'secret'
 };
-config.email = "secretary@friendsofsonningcommonlibrary.org.uk";
+config.email = "readingcomputersolutions@gmail.com";
 
 config.contactUs = [
         { "reason":"Membership", "email":"membership@friendsofsonningcommonlibrary.org.uk" },

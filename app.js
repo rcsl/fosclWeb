@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
 var expressValidator = require('express-validator');
 var config = require('./config.js');
+var helmet = require('helmet');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -20,12 +21,20 @@ app.set('view engine', 'pug');
 
 // uncomment after placing your favicon in /public
 app.use(favicon(__dirname + '/public/favicon.ico'));
+
+// production only
+app.use(helmet());
+
+// dev only
 app.use(logger('dev'));
+
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(helmet());
 
 app.use('/', routes);
 app.use('/users', users);

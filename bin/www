@@ -88,3 +88,27 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
+
+/**
+ * Event listener for shutdown events
+ */
+
+// listen for TERM signal .e.g. kill 
+process.on ('SIGTERM', onGracefulShutdown);
+
+// listen for INT signal e.g. Ctrl-C
+process.on ('SIGINT', onGracefulShutdown); 
+
+function onGracefulShutdown(){
+  console.log("Received kill signal, shutting down gracefully.");
+  server.close(function() {
+    console.log("Closed out remaining connections.");
+    process.exit()
+  });
+  
+   // if after n secoonds 
+   setTimeout(function() {
+       console.error("Could not close connections in time, forcefully shutting down");
+       process.exit()
+  }, 10*1000);
+}
