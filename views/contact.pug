@@ -14,13 +14,17 @@ append body
       p Grove Road
       p Sonning Common
       p RG4 9RH
-      p phone 0118 972 2448
+      p phone : 0118 972 2448
       p 24-hour renewal : 0845 1202811 (you will need your 4 digit PIN)
-      p email #[a(href='mailto:sonningcommon.library@oxfordshire.gov.uk') sonningcommon.library@oxfordshire.gov.uk]
+      p email : #[a(href='mailto:sonningcommon.library@oxfordshire.gov.uk') sonningcommon.library@oxfordshire.gov.uk]
       br
       h3 Friends of Sonning Common Library
       br
       p If you would like more information about FoSCL or our activities the easiest way to contact us is using the contact form on this page.
+      br
+      h3 Volunteering
+      br
+      p If you are interested in volunteering please ask in the library or contact #[a(href='https://www.oxfordshire.gov.uk/cms/public-site/volunteering-oxfordshire-libraries') Oxfordshire Libraries] via their website.
     .col-md-6
       if undefined === err 
         form(action='/contact', name='contactus', id='contactus', method='post')
@@ -33,6 +37,13 @@ append body
             label(for='email') Email:
             br
             input(name='email', type='text', value=(undefined===contact ? '' : contact.email), id='email')
+            p
+            label(for='email') So we can direct your enquiry please tell us why you are contacting us
+            br
+            select(name="reason")
+              option.disabled.hidden Please select the closest
+              each reason in reasons
+                option(value=reason.val) #{reason.text}
             p
             label(for='subject') Subject:
             br
@@ -58,7 +69,8 @@ append body
           +panel-success(msg)
             p Name    : !{contact.name}
             p Email   : !{contact.email}
+            p Reason  : !{contact.reason}
             p Subject : !{contact.subject}
             br
-            p Message
+            h3 Your message
             p=contact.message

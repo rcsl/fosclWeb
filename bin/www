@@ -88,3 +88,35 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
+
+/**
+ * Event listener for shutdown & 'live' reload events
+ */
+
+// listen for USER DEFINED Signals
+process.on('SIGUSR1', onReloadConfig);
+
+// listen for TERM signal .e.g. Termination request (NOT a KILL ALL)
+process.on ('SIGTERM', onGracefulShutdown);
+
+// listen for INT signal e.g. Ctrl-C
+process.on ('SIGINT', onGracefulShutdown); 
+
+function onReloadConfig(){
+  config.log("Reloading config.js in responce to a user signal");
+  delete require.cache[require.resolve('config')];
+}
+
+function onGracefulShutdown(){
+  console.log("Received kill signal, shutting down gracefully.");
+  server.close(function() {
+    console.log("Closed out remaining connections.");
+    process.exit()
+  });
+  
+   // if after n secoonds 
+   setTimeout(function() {
+       console.error("Could not close connections in time, forcefully shutting down");
+       process.exit()
+  }, 5*1000);
+}

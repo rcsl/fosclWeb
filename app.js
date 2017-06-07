@@ -6,7 +6,11 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
 var expressValidator = require('express-validator');
+var helmet = require('helmet');
+
+
 var config = require('./config.js');
+
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -20,12 +24,31 @@ app.set('view engine', 'pug');
 
 // uncomment after placing your favicon in /public
 app.use(favicon(__dirname + '/public/favicon.ico'));
+
+app.use(helmet());
 app.use(logger('dev'));
+
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(expressValidator());
+app.use(expressValidator({
+  customValidators:{
+    isValidId : function (value, array){
+      // expect an array of valid objects that contain an field called id
+      var num = parseInt(value);
+      for(var i=0; i< array.length; i++){
+        if(array[i].id ==num)
+          return true;
+      }
+      value=-1;
+      return false;
+    }
+  }
+}));
+
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.use('/', routes);
 app.use('/users', users);
@@ -53,6 +76,8 @@ if (app.get('env') === 'development') {
 
 // production error handler
 // no stacktraces leaked to user
+
+if (app.get('env') === 'production') {
 app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error', {
@@ -60,6 +85,6 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
-
+}
 
 module.exports = app;
