@@ -14,5 +14,5 @@ config.contactUs = [
         { "id" : 4, "reason":"Something else", "email": "secretary@friendsofsonningcommonlibrary.org.uk" },
     ];
 
-
+config.port = '3000';
 module.exports = config;
