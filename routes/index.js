@@ -130,10 +130,9 @@ router.post('/contact', function(req,res){
       port: 465,
       secure: true,
       auth: {
-        type: 'OAuth2',
+        //type: 'OAuth2',
         user: config.gapi.user,
-        serviceClient: config.gapi.serviceClient,
-        privateKey: config.gapi.privateKey
+        pass : 'envelop98'
         }
     });
     // sender is our email
