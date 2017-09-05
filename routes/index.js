@@ -146,7 +146,7 @@ router.post('/contact', function(req,res){
     messageText += req.body.message;
    
     var messageHTML = "<p>The following enquiry has been received from the Friends of Sonning Common Library web-site:-";
-    messageHTML += '<p><p><b>Visitor : </b> ' + req.body.name + ' &lt' + req.body.email + '&gt' + '<h2>Message Content';
+    messageHTML += '<p><p><b>Visitor : </b> ' + req.body.name + ' <' + req.body.email + '>' ;
     messageHTML += '<p><b>Nature of Enquiry : </b>' + selectedReason.reason;
     messageHTML += '<h2>Message Content</h2><p>';
     messageHTML +=req.body.message;
@@ -175,7 +175,7 @@ router.post('/contact', function(req,res){
 });
 
 router.get('/join', function(req,res, next){
-    res.render('join', { title: 'Friends of Sonning Common Library' });
+    res.render('register', { title: 'Friends of Sonning Common Library' });
 });
 router.get('/swatch', function(req,res, next){
     res.render('bootswatch', { title: 'Friends of Sonning Common Library' });
