@@ -16,3 +16,14 @@ body {
 .theme-showcase .navbar .container {
   width: auto;
 }
+.banner-purple {
+  border: solid #6630EA;
+  color : red;
+  text-align: center;
+  vertical-align: middle;
+  background-color:#6630EA;
+  height: 50px;
+}
+.line-thro {
+  text-decoration: line-through;
+}
