@@ -8,6 +8,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Friends of Sonning Common Library' });
 });
 
+//simple heathcheck
+router.get('/health-check', (req, res) => res.sendStatus(200));
+
 router.get('/shortstory', function(req,res, next){
     res.render('shortstory', { title: 'Friends of Sonning Common Library' });
 });
