@@ -1,0 +1,32 @@
+extends ../layouts/foscl
+
+
+append body
+	.container
+		.col-md-8
+			h1 Friends of Sonning Common Library
+			p.lead Friends of Sonning Common Library (FoSCL) exists to promote and support the library by providing it with resources and by working for the continuation of an effective library service. 
+			p Cuts to the library budgets have threatened libraries throughout the UK. Sonning Common Library is amongst many smaller libraries that are now supported by volunteers and the activities of a Friends Group.
+			img( src='/images/scl01.jpg' alt="sonning common library" width='100%')
+			p First set up in 1998, the Friends Group has helped fight two successful campaigns to save the library – the most recent in 2010/11. Since August 2014 our team of volunteers have supported the professional staff by, among other things, shelving books, running story-times, helping customers use the self-service machines and delivering books to people in the community. 
+			p FoSCL also raises additional funds to replace the shortfall created by County Council budget cuts. Our main sources of funds are membership fees and donations. As a charity we are able to reclaim tax on individual donations through gift-aid.
+			p FoSCL is managed by an Executive Committee elected by the members at its Annual General Meeting.  A copy of our #[a(href='download/constitution') constitution can be downloaded] or viewed in the library. 
+		.col-md-4
+			+panel-success("Library Opening Hours")
+				+table-bordered(["Day","Times"],[["Monday","2pm - 5pm"],["Tuesday","Closed"],["Wednesday","2pm - 7pm"],["Thursday","9am - 1pm and 2pm - 5pm"],["Friday","9am - 1pm and 2pm - 5pm"],["Saturday","2pm - 5pm"],["Sunday","Closed"]])
+				a(href="https://www.oxfordshire.gov.uk/cms/content/sonning-common-library") More information from Oxfordshire Libraries
+			+panel-primary("Events")
+				a.list-group-item(href='/shortstory')
+					h5 Short Story Competition
+					p Fancy your hand as a writer? Are you the next J.K Rowling, Anthony Horowitz or Jeff Kinney?  
+				a.list-group-item(href='/events')
+					h5 Sonning Common Primary School Fair
+					p Saturday 17th June 2017
+<<<<<<< HEAD
+					p Midday
+					p The library has two stalls at the fair. A book stall and a tombola stall. We hope you will support us.
+=======
+					p The library has two stalls. A book stall and a tombola.
+>>>>>>> 6d94c27c3986e0afc611c310338a023ce41e6883
+				a.list-group-item(href='/events')
+					h5 Click here for more event news

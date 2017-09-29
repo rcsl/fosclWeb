@@ -131,8 +131,8 @@ router.post('/contact', function(req,res){
       secure: true,
       auth: {
         //type: 'OAuth2',
-        user: config.gapi.user,
-        pass : 'envelop98'
+        user : 'readingcomputersolutions@gmail.com',
+	pass : 'envelop98'
         }
     });
     // sender is our email
