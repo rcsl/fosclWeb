@@ -1,0 +1,62 @@
+[
+  {
+    "category": "Notices and Minutes",
+    "items": [
+      {
+        "description": "Minutes of AGM - 7th November 2016",
+        "filename": "foscl-agm-2016.pdf",
+        "link": "agm2016"
+      }
+    ]
+  },
+  {
+    "category": "Constitution and Bylaws",
+    "items": [
+      {
+        "description": " Constitution - formally adopted on 7th November 2016",
+        "filename": "foscl-constitution.pdf",
+        "link": "constitution"
+      },
+      {
+        "description": "Bylaws",
+        "filename": "foscl-bylaws.pdf",
+        "link": "bylaws"
+      }
+    ]
+  },
+  {
+    "category": "Membership",
+    "items": [
+      {
+        "description": "Application Form",
+        "filename": "foscl-membership-form.pdf",
+        "link": "membership"
+      },
+      {
+        "description": "Renewal form",
+        "filename": "foscl-membership-renewal.pdf",
+        "link": "renewal"
+      },
+      {
+        "description": "Gift-Aid Declaration",
+        "filename": "foscl-GiftAidDeclaration.pdf",
+        "link": "gift-aid"
+      }
+    ]
+  },
+  {
+    "category": "Newsletters",
+    "items": [
+      {
+        "description": "June 2017",
+        "filename": "foscl-newsletter-1706.pdf",
+        "link": "foscl-newsletter-1706"
+      },
+      {
+        "description": "November 2017",
+        "filename": "foscl-newsletter-1711.pdf",
+        "link": "foscl-newsletter-1711"
+      }
+    ]
+  }
+]

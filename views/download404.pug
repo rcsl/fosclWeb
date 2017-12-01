@@ -1,0 +1,10 @@
+extends ../layouts/foscl
+block link
+  -var activeMenu = 'Download';
+
+append body
+  h1 Downloads
+  .container
+    .col-md-9
+      p You wanted to download : '#{link}'. Sorry but we can't find that! 
+      p If you #[a(href='/contact') contact us] we can try and fix the problem and help you with what you are looking for.

@@ -6,25 +6,14 @@ append body
   h1 Downloads
   .container
     .col-md-9
-      p We hope you find the downloads you are looking for on this page. If you are looking for something please #[a(href='/contact') contact us].
+      p We hope you find the downloads you are looking for on this page. If you are looking for something else please #[a(href='/contact') contact us].
       p
       .col-md-9.col-md-offset-3
-        h3 Notices and Minutes
-        ul
-         li #[a(href='download/agm') Minutes of AGM - 7th November 2016]
-        p
-        h3 Constitution and Bylaws
-        ul
-          li #[a(href='download/constitution') Constitution - formally adopted on 7th Novemebr 2016]
-          li #[a(href='download/bylaws') Bylaws]
-        p
-        h3 Membership
-        ul
-          li #[a(href='/download/membership') Application Form]  
-          li #[a(href='download/renewal') Renewal Form] 
-          li #[a(href='download/gift-aid')  Gift-Aid Declaration]
-        p
-        h3 Newsletters
-        ul
-          li #[a(href='download/foscl-newsletter-1706') June 2017]
-        p
+        each cat in downloads
+          h3 #{cat.category}
+          ul
+            each item in cat.items
+              if item.link
+                li #[a(href='download/' + item.link) #{item.description}]
+            else
+              p No items in this category
