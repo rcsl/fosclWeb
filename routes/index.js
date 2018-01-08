@@ -1,8 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var config = require('../config.js');
+var pugCompiler = require('../modules/pugCompiler');
 var downloads = require('../data/download.json');
 const assert = require('assert');
+
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -22,7 +24,7 @@ router.get('/short-story-rules', function (req, res, next) {
 
 router.get('/download', function (req, res) {
   //pass json content to page
-  res.render('download', { downloads : downloads, title: 'Friends of Sonning Common Library - Downloads' });
+  res.render('download', { downloads: downloads, title: 'Friends of Sonning Common Library - Downloads' });
 });
 
 router.get('/download/:item', function (req, res) {
@@ -30,10 +32,10 @@ router.get('/download/:item', function (req, res) {
   var path = "public/downloads/";
   var reqLink = req.params['item'];
   var filename;
- 
+
   downloads.some(cat => {
     cat.items.some(item => {
-      if(item.link === reqLink){
+      if (item.link === reqLink) {
         filename = item.filename;
         return true;
       }
@@ -42,12 +44,12 @@ router.get('/download/:item', function (req, res) {
   });
   if (typeof filename !== 'undefined') {
     res.download(path + filename, function (err) {
-      if(err)
-        res.status(404).render('download404.pug', {title: 'Friends of Sonning Common Library - Downloads', link : reqLink});
+      if (err)
+        res.status(404).render('download404.pug', { title: 'Friends of Sonning Common Library - Downloads', link: reqLink });
     });
   }
   else {
-    res.status(404).render('download404.pug', {title: 'Friends of Sonning Common Library - Downloads', link : reqLink});
+    res.status(404).render('download404.pug', { title: 'Friends of Sonning Common Library - Downloads', link: reqLink });
   }
 });
 /*
@@ -117,28 +119,26 @@ router.get('/contact', function (req, res, next) {
 router.post('/contact', function (req, res) {
   var mailOpts, transport;
 
-  const nodemailer = require('nodemailer');
-  /* todo we will route our email based on nature of enquiry
-   eg membership, competition, events, other question
-````*/
-
-
   req.sanitize('name').escape().trim();
   req.sanitize('email').escape().trim();
   req.sanitize('subject').escape().trim();
+  req.sanitize('message').escape().trim();
 
 
   req.checkBody('name', "Name is required").notEmpty();
-  req.checkBody('email', "Email is required").notEmpty();
-  req.checkBody('reason', "A reason is required").notEmpty().isValidId(config.contactUs);
+  req.checkBody('email', "Your email address is required").notEmpty();
+  req.checkBody('reason', "A reason is required").notEmpty().isValidId(config.contactUs.list);
   req.checkBody('email', "Email is not in a recognised format (eg. someone@example.com)").isEmail();
   req.checkBody('message', 'Please add a message or question').notEmpty();
 
-
   var errors = req.validationErrors();
-
   var opts = getOptions();
-  var reasonIdx = parseInt(req.body.reason, 10);  //this value should have been validated!!
+  if (errors) {     // Render the form using error information
+    res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', reasons: opts, contact: contact, errors: errors });
+    return;
+  }
+
+  var reasonIdx = parseInt(req.body.reason, 10);  //this value has been validated!!
   var selectedReason = getMyContactReason(reasonIdx); // this may be invalid so need to set error!
   var contact = (
     {
@@ -150,60 +150,52 @@ router.post('/contact', function (req, res) {
       message: req.body.message
     }
   );
-
-  if (errors) {     // Render the form using error information
+if (errors) {     // Render the form using error information
     res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', reasons: opts, contact: contact, errors: errors });
     return;
   }
+
   // process email then render page replacing form with a 'thank you message'
-
-  transport = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
-    auth: {
-      //type: 'OAuth2',
-      user: 'readingcomputersolutions@gmail.com',
-      pass: 'envelop98'
-    }
-  });
-  // sender is our email
-  // from is the email of person who submitted message
-  // to is obtained from config.contactUs 
-
-
-  var messageText = 'The following message has been received from the web-site:-\n\n';
-  messageText += 'Visitor : ' + req.body.name + ' <' + req.body.email + '>\n';
-  messageText += 'Nature of Enquiry : ' + selectedReason.reason + '\n\nMessage Content\n---------------\n\n';
-  messageText += req.body.message;
-
-  var messageHTML = "<p>The following enquiry has been received from the Friends of Sonning Common Library web-site:-";
-  messageHTML += '<p><p><b>Visitor : </b> ' + req.body.name + ' <' + req.body.email + '>';
-  messageHTML += '<p><b>Nature of Enquiry : </b>' + selectedReason.reason;
-  messageHTML += '<h2>Message Content</h2><p>';
-  messageHTML += req.body.message;
-  mailOpts = {
-    from: req.body.name + ' &lt;' + req.body.email + '&gt;',
-    sender: config.gapi.user,
-    to: selectedReason.email,
-    replyTo: req.body.name + ' &lt;' + req.body.email + '&gt;',
-    subject: 'FoSCL Website Contact :' + req.body.subject,
-    text: messageText,
-    html: messageHTML
+  var mailgun = require('mailgun-js')(config.mg);
+  var content = {
+    title: '[FoSCL Web] ' + req.body.subject,
+    email: req.body.email,
+    name: req.body.name,
+    category: selectedReason.category,
+    subject: req.body.subject,
+    message: req.body.message
   };
-
-  transport.sendMail(mailOpts, function (err, response) {
+  var data = {
+    from: config.mg.sender,
+    to: selectedReason.email,
+    subject: content.title
+  };
+  data.plaintext = generateTextEmail(content);
+  // create and render our email message to browser!!
+  // get compiled template 
+  pugCompiler.compile('email/enquiry', content, function (err, html) {
     if (err) {
-      // we have had a problem - report it - maybe they should try again later
-      res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', reasons: opts, msg: 'Error occured, message not sent. Perhaps try again later.', err: true, contact: contact })
+      throw new Error('Problem compiling template(double check relative path): ' + RELATIVE_TEMPLATE_PATH);
     }
-    else {
-      // we just need to tell client we are done
-      res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', reasons: opts, msg: 'Your message has been sent! Thank you.', err: false, contact: contact })
-    }
-
+    data.html = html;
+    mailgun.messages().send(data, function (error, body) {
+      if (error)// we have had a problem - report it - maybe they should try again later
+        res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', reasons: opts, msg: 'Error occured, message not sent. Perhaps try again later.', err: true, contact: contact })
+      else 
+        // we just need to tell client we are done
+        res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', reasons: opts, msg: 'Your message has been forwarded to someone who should be able to help. Thank you.', err: false, contact: contact })
+    });
   });
 
+  /*
+  
+  
+    transport.sendMail(mailOpts, function (err, response) {
+      if (err) {
+        
+  
+    });
+  */
 });
 
 router.get('/join', function (req, res, next) {
@@ -220,30 +212,30 @@ router.get('/register', function (req, res, next) {
 
 // get options from config.contactUs
 function getOptions() {
-  var opts = [];
-  for (i = 0; i < config.contactUs.length; i++) {
-    var item = {};
-    item.val = config.contactUs[i].id;
-    item.text = config.contactUs[i].reason;
-    opts.push(item);
-  }
-  if (opts.length === 0) {
-    var item = { "val": 0, "text": "General Enquiry" };
-    opts.push(item);
-  }
-  return opts;
-}
-function getMyContactReason(index) {
-  var option = { 'id': -1, 'email': config.default.email, 'reason': 'Unknown' }; //empty option will be return a default option
-  for (var i = 0; i < config.contactUs.length; i++) {
-    if (config.contactUs[i].id == index) {
-      option.id = index;
-      option.email = config.contactUs[i].email;
-      option.reason = config.contactUs[i].reason;
-      break;
-    }
-  }
-  return option;
+  var a = [];
+  config.contactUs.list.forEach(item => {
+    a.push({ val: item.id, text: item.reason });
+  });
+  return a;
 }
 
+function getMyContactReason(index) {
+  var option = config.contactUs.list.find(item => {
+    return item.id === index;
+  });
+  if (option === undefined)
+    return { 'id': -1, 'email': config.contactUs.default.email, 'reason': 'Unknown' };
+  else
+    return option;
+}
+function generateTextEmail(content) {
+  var buffer = 'FoSCL Website Enquiry\n\n+  A visitor to the foscl website has made an enquiry.\n\n+  Their query has been automatically allocated based on the way the vistor (sender) categorised their question and forwarded only to you.\
+   +  Please try to answer this enquiry as soon as possible or acknowledge it within 48 hours of receipt.\n\n+  If this enquiry should be directed elsewhere please forward this message to the relevant person and \
+   copy your email to the sender.\n\n';
+  buffer += 'From :' + content.name + '<' + content.email + '>\n';
+  buffer += content.category + ': ' + content.subject + '\n\n';
+  buffer += content.message;
+
+  return buffer;
+}
 module.exports = router;

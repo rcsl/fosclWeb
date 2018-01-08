@@ -4,7 +4,6 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var nodemailer = require('nodemailer');
 var expressValidator = require('express-validator');
 var helmet = require('helmet');
 
@@ -35,15 +34,12 @@ app.use(expressValidator({
   customValidators:{
     isValidId : function (value, array){
       // expect an array of valid objects that contain an field called id
-      var num = parseInt(value);
-      for(var i=0; i< array.length; i++){
-        if(array[i].id ==num)
-          return true;
-      }
-      value=-1;
-      return false;
-    }
+      return array.some(i => {
+        return i.id==parseInt(value);
+      });
+   
   }
+}
 }));
 
 app.use(cookieParser());
