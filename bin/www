@@ -7,28 +7,51 @@
 var app = require('../app');
 var debug = require('debug');
 var http = require('http');
+var https = require('https');
 var config = require('../config.js');
+var fs = require('fs');
 
 /**
- * Get port from environment and store in Express.
+ * Get port etc from config
  */
 
 var port = normalizePort(config.port || '80');
-app.set('port', port);
+var sslport = normalizePort(config.sslport || '443');
+
 
 /**
  * Create HTTP server.
  */
 
-var server = http.createServer(app);
+var httpServer = http.createServer(app);
+
+/**
+ * Create HTTPS server.
+ */
+var privatekey = fs.readFileSync(config.ssl.key, 'utf8');
+var certificate = fs.readFileSync(config.ssl.cert, 'utf8');
+
+var credentials = {
+  key:  privatekey,
+  cert: certificate,
+  passphrase: config.ssl.passphrase  //this should be empty if not required 
+};
+
+var httpsServer = https.createServer(credentials, app);
+
 
 /**
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
+httpServer.listen(port);
+httpServer.on('http error', onError);
+httpServer.on('http listening', onListening);
+
+
+httpsServer.listen(sslport);
+httpsServer.on('https error', onError);
+httpsServer.on('https listening', onListening);
 
 /**
  * Normalize a port into a number, string, or false.
