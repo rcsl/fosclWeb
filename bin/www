@@ -28,16 +28,24 @@ var httpServer = http.createServer(app);
 /**
  * Create HTTPS server.
  */
+var startSSL = true;
+try {
 var privatekey = fs.readFileSync(config.ssl.key, 'utf8');
 var certificate = fs.readFileSync(config.ssl.cert, 'utf8');
-
+} catch(err){// if this happens we must notify webadmin and we mst not try to start ssl
+  startSSL=false;
+  console.log(err);  
+}
 var credentials = {
   key:  privatekey,
-  cert: certificate,
-  passphrase: config.ssl.passphrase  //this should be empty if not required 
-};
-
-var httpsServer = https.createServer(credentials, app);
+  cert: certificate
+}; 
+if(config.ssl.passphrase!==undefined) //this should be empty if not required 
+  credentials.passphrase = config.ssl.passphrase;
+  
+var httpsServer
+if(startSSL)
+  httpsServer = https.createServer(credentials, app);
 
 
 /**
@@ -48,10 +56,12 @@ httpServer.listen(port);
 httpServer.on('http error', onError);
 httpServer.on('http listening', onListening);
 
+if(startSSL){
+  httpsServer.listen(sslport);
+  httpsServer.on('https error', onError);
+  httpsServer.on('https listening', onListening);
+}
 
-httpsServer.listen(sslport);
-httpsServer.on('https error', onError);
-httpsServer.on('https listening', onListening);
 
 /**
  * Normalize a port into a number, string, or false.
