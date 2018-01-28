@@ -93,7 +93,7 @@ router.get('/download/:file', function(req, res){
     }
   // if we get here NO FILE
   
-});*/
+});
 router.get('/entryform', function (req, res) {
   var file = 'public/downloads/shortstory-entryform.pdf';
   res.download(file, function (err) {
@@ -102,7 +102,7 @@ router.get('/entryform', function (req, res) {
       res.headersSent;
     }
   }); // redirect to calling page with message
-});
+});*/
 router.get('/events', function (req, res, next) {
   //todo we fill options from our database
   res.render('events', { title: 'Friends of Sonning Common Library - Events' });
