@@ -3,6 +3,7 @@ var router = express.Router();
 var config = require('../config.js');
 var pugCompiler = require('../modules/pugCompiler');
 var downloads = require('../data/download.json');
+var events =  require('../data/events.json');
 const assert = require('assert');
 
 
@@ -105,7 +106,7 @@ router.get('/entryform', function (req, res) {
 });*/
 router.get('/events', function (req, res, next) {
   //todo we fill options from our database
-  res.render('events', { title: 'Friends of Sonning Common Library - Events' });
+  res.render('events', { events: events, title: 'Friends of Sonning Common Library - Events' });
 });
 router.get('/about', function (req, res, next) {
   //todo we fill options from our database

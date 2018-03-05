@@ -1,0 +1,11 @@
+mixin displayEvent(event)
+  // events are contained in json objects
+  h2 #{event.title}
+  h5 To be announced
+  br
+  .col-md-4
+    img(src='/images/writerslife.jpg' width='100%')
+  .col-md-8
+    p Join local authors Vera Morris and Tom Fort for insights into the joys, disappointments and practicalities of being a writer. Does anybody still write with an old fashioned pen? Can anyone match Trollope’s prodigious output of three thousand words a day and is writer’s block painful? 
+    
+  
