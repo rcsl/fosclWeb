@@ -57,7 +57,7 @@ append body
             br
             textarea(name='message', cols='40', rows='10', id='message' value=(undefined===contact ? '' : contact.message))
             p
-            .g-recaptcha(data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI")
+            .g-recaptcha(data-sitekey=captchakey)
             p
             input(name='submit', type='submit', value='Send', id='submit')
             br
