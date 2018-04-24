@@ -2,7 +2,9 @@ extends ../layouts/foscl
 
 block link
   -var activeMenu = 'Contact Us';
-  
+
+append head
+  script(src='https://www.google.com/recaptcha/api.js')
 append body
   .container
 
@@ -43,7 +45,7 @@ append body
             label(for='email') So we can direct your enquiry please tell us why you are contacting us
             br
             select(name="reason")
-              option.disabled.hidden Please select the closest
+              option.disabled.hidden(value=-1) Please select the closest
               each reason in reasons
                 option(value=reason.val) #{reason.text}
             p
@@ -54,6 +56,8 @@ append body
             label(for='message') Message:
             br
             textarea(name='message', cols='40', rows='10', id='message' value=(undefined===contact ? '' : contact.message))
+            p
+            .g-recaptcha(data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI")
             p
             input(name='submit', type='submit', value='Send', id='submit')
             br

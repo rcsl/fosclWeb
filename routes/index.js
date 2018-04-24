@@ -1,10 +1,11 @@
-var express = require('express');
-var router = express.Router();
-var config = require('../config.js');
-var pugCompiler = require('../modules/pugCompiler');
-var downloads = require('../data/download.json');
-var events =  require('../data/events.json');
+const express = require('express');
+const router = express.Router();
+const config = require('../config.js');
+const pugCompiler = require('../modules/pugCompiler');
+const downloads = require('../data/download.json');
+const events = require('../data/events.json');
 const assert = require('assert');
+const request = require('request');
 
 
 /* GET home page. */
@@ -115,7 +116,7 @@ router.get('/about', function (req, res, next) {
 router.get('/contact', function (req, res, next) {
   //todo we fill options from our database
   var opts = getOptions();
-  res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', reasons: opts });
+  res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', reasons: opts, captchakey: config.captcha.sitekey});
 });
 router.post('/contact', function (req, res) {
   var mailOpts, transport;
@@ -134,59 +135,75 @@ router.post('/contact', function (req, res) {
 
   var errors = req.validationErrors();
   var opts = getOptions();
-  if (errors) {     // Render the form using error information
-    res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', reasons: opts, contact: contact, errors: errors });
-    return;
-  }
 
-  var reasonIdx = parseInt(req.body.reason, 10);  //this value has been validated!!
-  var selectedReason = getMyContactReason(reasonIdx); // this may be invalid so need to set error!
+  var selectedReason = getMyContactReason(req.body.reason); 
   var contact = (
     {
       name: req.body.name,
       email: req.body.email,
-      reasonVal: reasonIdx,
+      reasonVal: selectedReason.id,
       reason: selectedReason.reason,
       subject: req.body.subject,
       message: req.body.message
     }
   );
-if (errors) {     // Render the form using error information
-    res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', reasons: opts, contact: contact, errors: errors });
+
+
+
+   if (errors) {     // Render the form using error information
+     res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', reasons: opts, captchakey: config.captcha.sitekey, contact: contact, errors: errors });
+     return;
+   }
+  // no form errors -- how about captcha
+  if (req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null) {
+    // create errors object
+    var err = [{ location: "body", msg: "Tick to confirm you are not a robot", param: "recaptca", value: "" }];
+    res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', reasons: opts, captchakey: config.captcha.sitekey, contact: contact, errors: err });
     return;
   }
-
-  // process email then render page replacing form with a 'thank you message'
-  var mailgun = require('mailgun-js')(config.mg);
-  var content = {
-    title: '[FoSCL Web] ' + req.body.subject,
-    email: req.body.email,
-    name: req.body.name,
-    category: selectedReason.category,
-    subject: req.body.subject,
-    message: req.body.message
-  };
-  var data = {
-    from: config.mg.sender,
-    to: selectedReason.email,
-    subject: content.title
-  };
-  data.plaintext = generateTextEmail(content);
-  // create and render our email message to browser!!
-  // get compiled template 
-  pugCompiler.compile('email/enquiry', content, function (err, html) {
-    if (err) {
-      throw new Error('Problem compiling template(double check relative path): ' + RELATIVE_TEMPLATE_PATH);
+  
+  const verifyURL = "https://www.google.com/recaptcha/api/siteverify?secret=" + config.captcha.secretkey + "&response=" + req.body['g-recaptcha-response']
+    + "&remoteip=" + req.connection.remoteAddress;
+  request(verifyURL, (err, response, body) => {
+    body = JSON.parse(body);
+    if (err || body.success === undefined || !body.success) {
+      var err = [{ location: "body", msg: "Failed captcha test", param: "recaptca", value: "" }];
+      res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', reasons: opts, captchakey: config.captcha.sitekey, contact: contact, errors: err });
+      return;
     }
-    data.html = html;
-    mailgun.messages().send(data, function (error, body) {
-      if (error)// we have had a problem - report it - maybe they should try again later
-        res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', reasons: opts, msg: 'Error occured, message not sent. Perhaps try again later.', err: true, contact: contact })
-      else 
-        // we just need to tell client we are done
-        res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', reasons: opts, msg: 'Your message has been forwarded to someone who should be able to help. Thank you.', err: false, contact: contact })
+    // process email then render page replacing form with a 'thank you message'
+    var mailgun = require('mailgun-js')(config.mg);
+    var content = {
+      title: '[FoSCL Web] ' + req.body.subject,
+      email: req.body.email,
+      name: req.body.name,
+      category: selectedReason.category,
+      subject: req.body.subject,
+      message: req.body.message
+    };
+    var data = {
+      from: config.mg.sender,
+      to: selectedReason.email,
+      subject: content.title
+    };
+    data.plaintext = generateTextEmail(content);
+    // create and render our email message to browser!!
+    // get compiled template 
+    pugCompiler.compile('email/enquiry', content, function (err, html) {
+      if (err) {
+        throw new Error('Problem compiling template(double check relative path): ' + RELATIVE_TEMPLATE_PATH);
+      }
+      data.html = html;
+      mailgun.messages().send(data, function (error, body) {
+        if (error)// we have had a problem - report it - maybe they should try again later
+          res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', reasons: opts, msg: 'Error occured, message not sent. Perhaps try again later.', err: true, contact: contact })
+        else
+          // we just need to tell client we are done
+          res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', reasons: opts, msg: 'Your message has been forwarded to someone who should be able to help. Thank you.', err: false, contact: contact })
+      });
     });
   });
+
 
   /*
   
@@ -222,7 +239,7 @@ function getOptions() {
 
 function getMyContactReason(index) {
   var option = config.contactUs.list.find(item => {
-    return item.id === index;
+    return item.id == index;
   });
   if (option === undefined)
     return { 'id': -1, 'email': config.contactUs.default.email, 'reason': 'Unknown' };
