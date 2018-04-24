@@ -55,7 +55,7 @@ append body
             p
             label(for='message') Message:
             br
-            textarea(name='message', cols='40', rows='10', id='message' value=(undefined===contact ? '' : contact.message))
+            textarea(name='message', cols='40', rows='10', id='message')=(undefined===contact ? '' : contact.message)
             p
             .g-recaptcha(data-sitekey=captchakey)
             p

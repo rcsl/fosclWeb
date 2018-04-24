@@ -116,7 +116,7 @@ router.get('/about', function (req, res, next) {
 router.get('/contact', function (req, res, next) {
   //todo we fill options from our database
   var opts = getOptions();
-  res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', reasons: opts, captchakey: config.captcha.sitekey});
+  res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', reasons: opts, captchakey: config.captcha.sitekey });
 });
 router.post('/contact', function (req, res) {
   var mailOpts, transport;
@@ -136,7 +136,7 @@ router.post('/contact', function (req, res) {
   var errors = req.validationErrors();
   var opts = getOptions();
 
-  var selectedReason = getMyContactReason(req.body.reason); 
+  var selectedReason = getMyContactReason(req.body.reason);
   var contact = (
     {
       name: req.body.name,
@@ -147,13 +147,10 @@ router.post('/contact', function (req, res) {
       message: req.body.message
     }
   );
-
-
-
-   if (errors) {     // Render the form using error information
-     res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', reasons: opts, captchakey: config.captcha.sitekey, contact: contact, errors: errors });
-     return;
-   }
+  if (errors) {     // Render the form using error information
+    res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', reasons: opts, captchakey: config.captcha.sitekey, contact: contact, errors: errors });
+    return;
+  }
   // no form errors -- how about captcha
   if (req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null) {
     // create errors object
@@ -161,7 +158,7 @@ router.post('/contact', function (req, res) {
     res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', reasons: opts, captchakey: config.captcha.sitekey, contact: contact, errors: err });
     return;
   }
-  
+
   const verifyURL = "https://www.google.com/recaptcha/api/siteverify?secret=" + config.captcha.secretkey + "&response=" + req.body['g-recaptcha-response']
     + "&remoteip=" + req.connection.remoteAddress;
   request(verifyURL, (err, response, body) => {
