@@ -3,7 +3,7 @@ const router = express.Router();
 const config = require('../config.js');
 const pugCompiler = require('../modules/pugCompiler');
 const downloads = require('../data/download.json');
-const events = require('../data/events.json');
+
 const assert = require('assert');
 const request = require('request');
 
@@ -107,7 +107,16 @@ router.get('/entryform', function (req, res) {
 });*/
 router.get('/events', function (req, res, next) {
   //todo we fill options from our database
+  var events = require('../data/events.json');
   res.render('events', { events: events, title: 'Friends of Sonning Common Library - Events' });
+});
+router.get('/news', function (req, res, next) {
+  //todo we fill options from our database
+  var news = require('../data/news.json');
+  //sort news by pub date here
+  news.sort(comparePublishedDate);
+
+  res.render('news', { news: news.sort(comparePublishedDate), title: 'Friends of Sonning Common Library - Latest' });
 });
 router.get('/about', function (req, res, next) {
   //todo we fill options from our database
@@ -252,5 +261,15 @@ function generateTextEmail(content) {
   buffer += content.message;
 
   return buffer;
+}
+
+function comparePublishedDate(a, b){
+  //is a > b :-1 , b > a : 1 and a=b : 0
+
+if(a.pub_date > b.pub_date)
+  return -1;
+if (b.pub_date > a.pub_date)
+  return 1;
+return 0;
 }
 module.exports = router;

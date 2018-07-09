@@ -1,21 +1,17 @@
 [
   {
-    "title": "A Writer's Life",
-    "start_dttm": "Thursday 24th May 2018 at 7.30pm",
-    "venue": "Sonning Common Library",
-    "text": "Join local authors Vera Morris and Tom Fort for insights into the joys, disappointments and practicalities of being a writer. Does anybody still write with an old fashioned pen? Can anyone match Trollope’s prodigious output of three thousand words a day and is writer’s block painful?",
-    "image": {
-      "src": "/images/writerslife.jpg",
-      "width": "100%",
-      "position": "right"
+    "title": "Short Story Competition",
+    "title_image": {
+      "src": "/images/short-story.png",
+      "width": "25%",
+      "position": "top"
     },
-    "tickets": "Tickets will be on sale from 1st April from the Library or Occasions",
-    "prices": "Tickets will cost £5 (this will include a glass of wine)"
-  },
-  {
-    "title": "Sonning Common Primary School Fair",
-    "start_dttm": "Saturday 23rd June",
-    "text": "FoSCL will be running two stalls at the School Fair. A book stall and a tombola stall"
+     "text": ["Have you got a great story to tell, real or imagined? Then why not put pen to paper, or rather your fingers to your keyboard, and enter our short story competition.",
+              "This years competition is open to all ages",
+              "Your stories need to be submitted by noon on 15th September 2018. The winners will be announced in the Library on Saturday 13th October 2018."
+        ],
+  
+    "link": { "destination": "shortstory", "text" : "Follow this link for more information"}
   },
   {
     "title": "National Libraries Week",
@@ -25,11 +21,11 @@
       "width": "25%",
       "position": "top"
     },
-    "text": "We are in the process of planning a programme of events"
+    "text": ["We are in the process of planning a programme of events"]
   },
   {
     "title": "FoSCL Quiz Night",
-    "start_dttm": "Friday 13th October 2018",
+    "start_dttm": "Friday 12th October 2018",
     "time2": "Doors open 7 pm  Quiz starts 7.30pm",
     "venue": "Sonning Common Primary School Hall",
     "text": [

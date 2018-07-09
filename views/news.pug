@@ -1,0 +1,19 @@
+extends ../layouts/foscl
+block link
+  -var activeMenu = 'News';
+
+mixin displayNews(item)
+  // events are contained in json objects
+  .latestnews
+    h2 #{item.headline}
+    h5 #{item.subhead}
+    h5 #{item.byline}
+    | !{item.content}
+    .clearfix
+ 
+append body
+  h1 Latest News
+  .container
+    each item in news
+      +displayNews(item)
+
