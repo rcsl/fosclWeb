@@ -5,7 +5,7 @@ block link
 mixin displayEvent(event)
   // events are contained in json objects
   .showevent
-    h2 #{event.title}
+    h2(id=event.id) #{event.title}
     .col-md-4
       if(event.title_image)
         img(src=event.title_image.src width="100%")

@@ -15,7 +15,7 @@
     ]
   },
   {
-    "category": "Constitution and Bylaws",
+    "category": "Constitution, Bylaws and Policies",
     "items": [
       {
         "description": " Constitution - formally adopted on 7th November 2016",
@@ -26,6 +26,11 @@
         "description": "Bylaws",
         "filename": "foscl-bylaws.pdf",
         "link": "bylaws"
+      },
+      {
+        "description": "Data Protection Policy",
+        "filename": "foscl-dataprotectionpolicy.pdf",
+        "link": "gdpr"
       }
     ]
   },
@@ -61,6 +66,11 @@
         "description": "November 2017",
         "filename": "foscl-newsletter-1711.pdf",
         "link": "foscl-newsletter-1711"
+      },
+      {
+        "description": "September 2018",
+        "filename": "foscl-newsletter-1809.pdf",
+        "link": "foscl-newsletter-1809"
       }
     ]
   },
