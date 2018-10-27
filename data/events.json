@@ -1,56 +1,4 @@
 [
-    {
-    "id": "natlibweek",
-    "title": "National Libraries Week",
-    "start_dttm": "8th October to 13th October 2018",
-    "title_image": {
-      "src": "/images/LibWeekRGB.png",
-      "width": "25%",
-      "position": "top"
-    },
-    "text": [""]
-  },
-  {
-    "id": "quiznight",
-    "title": "FoSCL Quiz Night",
-    "start_dttm": "Friday 12th October 2018",
-    "time2": "Doors open 7 pm  Quiz starts 7.30pm",
-    "venue": "Sonning Common Primary School Hall",
-    "text": [
-      "We are repeating our very successful Quiz.",
-      "This year it will be held in the School Hall. Our Quiz masters will provide a great range of interesting questions. We will have a bar with wine, beer, soft drinks and nibbles available. There will be a raffle with a variety of wonderful prizes.",
-      "Teams of maximum 6 people"
-    ],
-    "tickets": "Tickets on sale at the Library or Occasions.",
-    "prices": "Tickets £20 per table"
-  },
-  {
-    "id": "shortstory18",
-    "title": "Short Story Competition",
-    "start_dttm": "Saturday 13th October 2018, midday",
-    "title_image": {
-      "src": "/images/short-story.png",
-      "width": "25%",
-      "position": "top"
-    },
-    "venue": "Sonning Common Library",
-     "text": ["The winners of this years competition will be annouced and prizes awarded."
-        ],
-  
-    "link": { "destination": "shortstory", "text" : "Follow this link for more information"}
-  }, 
-  {
-    "id": "librarylion",
-    "title": "The Library Lion",
-    "start_dttm": "Monday 22nd October 2018",
-    "time2": "11am",
-    "venue": "Sonning Common Library",
-    "text": [
-      "Untied Artists will be performing “The Library Lion”. A fun and entertaining event for younger children to kick off half-term week.",
-      "Suitable for those aged 4 to 7 years. Children must be accompanied."
-    ],
-    "tickets": "Tickets £3 for a child, £5 for two siblings. Full details and tickets available from the library."
-  },
   {
     "id": "agm",
     "title": "AGM",
@@ -61,6 +9,15 @@
       "The agenda will be sent out during October."
     ]
    
+  },
+  {
+    "id": "xmas",
+    "title": "Christmas 2018 - Seasonal Refreshments",
+    "start_dttm": "Friday 21st December",
+    "time2": "from 2.30pm",
+    "venue": "Sonning Common Library",
+    "text": ["You are all invited to join us for seasonal refreshments in the Library Friday 21st December from 2.30 pm",
+              "The Library will be open during the week following Christmas."]
   }
 
 ]

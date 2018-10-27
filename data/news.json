@@ -1,10 +1,28 @@
 [
   {
+    "headline": "The Library Lion",
+    "subhead" : "22nd October 2018",
+    "pub_date": "2018-10-24",
+    "content" :  "<div class='col-md-3'><img src='/images/librarylion-405x320.jpg' width='100%'/></div><div class='col-md-8'><p>The Library Lion is a wonderful interactive play for children aged four to seven based on a heart warming story written by Michelle Knudsen.</p><p>We watched a superb performance of the play by Untied Artists. It was brilliant and exceeded our expectations. The Actors kept the young audience captivated and fully involved from the beginning to the end. We hope they will come again.</p><p>The children and their parents had a wonderful morning.</p></div>"
+  },
+  {
+    "headline": "FoSCL Quiz Night",
+    "subhead" : "12th October 2018",
+    "pub_date": "2018-10-24",
+    "content" : "<p>Thank you to all the teams who entered<p/><p>The Winning Team was Comets, who won by answering the tie break question – 'Including the antenna on the top, in metres, how tall is the Eiffel Tower?’</p><p>The Quiz raised £783 towards Library Funds</p><p>The raffle was particularly successful due to the wonderful prizes we received from our most generous contributors.</p><img src='/images/quiz-banner.gif'><p>Do join us for our next Quiz in October 2019</p>"
+  
+  },
+  {
+    "headline": "Short Story Competition - Presentation",
+    "subhead" : "13th October 2018",
+    "pub_date": "2018-10-24",
+    "content" : "<div class='col-md-3'><img src='/images/short-story.png' width='100%'/></div><div class='col-md-9'>This years winners were announced in the library. We were delighted with the number of entries this year.<br/><br/>Congratulations to all our winners<br/><br/><table style='width:100%'><tr><td>Judges Award</td><td></td><td>Freya Hammond</td><td>Pocket Sized Neve Saves the Day</td></tr><tr><td>Under 11</td><td>1st</td><td>Sophie Stone </td><td>The Pearl </td></tr><tr><td> </td><td>Runner Up</td><td>Jacob Vorster </td><td>The Fox Catcher </td></tr><tr><td>Under 16 </td><td>1st</td><td>Freya Handley </td><td>A Summary of My Life</td></tr><tr><td> </td><td>Runner Up</td><td>Gabriela Stone</td><td>Moments can never be foretold </td></tr><tr><td>Over 16 </td><td>1st</td><td>Sheila Walker </td><td>Cat and Mouse</td></tr><tr><td> </td><td>Runner Up</td><td>Molly Hancock</td><td>Society Problem #249</td></tr></table><br/><p>Awards were presented by Jill Hutchinson the Chair of FoSCL</div>"
+   },
+  {
     "headline": "A Writer's Life",
     "subhead" : "24th May 2018",
     "pub_date": "2018-05-24",
     "content" : "<div class='col-md-3'><img src='/images/writerslife.jpg' width='100%'/></div><div class='col-md-9'>The Writer’s Evening was a great success. It was well attended and raised £215 towards Sonning Common Library funds.<p><p>The talks by authors Vera Morris and Tom Fort certainly captured the audience’s attention and we have been asked to hold another Writer’s evening in 2019!<p>Thank you Vera and Tom.</div>"
-
   },
   {  
     "headline": "Sonning Common Primary School Fair",    
