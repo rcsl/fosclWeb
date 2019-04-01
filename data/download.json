@@ -11,6 +11,11 @@
         "description": "Minutes of AGM - 23rd November 2017",
         "filename": "foscl-agm-2017.pdf",
         "link": "agm2017"
+      },
+      {
+        "description": "Minutes of AGM - 19th November 2018",
+        "filename": "foscl-agm-2018.pdf",
+        "link": "agm2018"
       }
     ]
   },
@@ -75,12 +80,12 @@
     ]
   },
   {
-    "category": "Short Story Competition",
+    "category": "Photography Competition",
     "items": [
       {
-        "description": "Entry Form",
-        "filename": "foscl-shortstory-entry2018.pdf",
-        "link": "foscl-shortstory-entry2018"
+        "description": "Rules 2019",
+        "filename": "Rules of the Photography  Competition-2019-04-01.pdf",
+        "link": "foscl-photography-rules-2019"
       }
     ]
   }

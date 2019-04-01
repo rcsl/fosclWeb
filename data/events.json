@@ -1,23 +1,77 @@
 [
   {
-    "id": "agm",
-    "title": "AGM",
-    "start_dttm": "Monday 19th November 2018",
-    "time2": "7pm",
-    "venue": "Sonning Common Library",
+    "id": "photo",
+    "title": "Photography Competition",
+    "start_dttm": "Monday 1st April 2019",
     "text": [
-      "The agenda will be sent out during October."
-    ]
-   
+      "Some say a picture is worth a thousand words - so FoSCL is asking those with an artistic bent to take part in our photography competition.",
+      "The theme wil be the wonderful village of Sonning Common and the beautiful countryside that surrounds it.",
+      "The winning entries will be turned in to postcards!",
+      "If you are thinking of entering please make sure you read the rules."
+    ],
+    "link":{ "destination":"/download/foscl-photography-rules-2019", "text": "Photography Competition Rules"}
+       
   },
   {
-    "id": "xmas",
-    "title": "Christmas 2018 - Seasonal Refreshments",
-    "start_dttm": "Friday 21st December",
-    "time2": "from 2.30pm",
+    "id" : "writers",
+    "title": "Authors' Evening",
+    "start_dttm": "Tuesday 21st May 2019",
     "venue": "Sonning Common Library",
-    "text": ["You are all invited to join us for seasonal refreshments in the Library Friday 21st December from 2.30 pm",
-              "The Library will be open during the week following Christmas."]
-  }
+    "text": ["Join Oxford crime writer Peter Tickler and Imogen Matthews - whose latest book is the story of survival in the Netherlands during the second world war."],
+    "tickets": "Tickets will be on sale from 15th April from the Library or Occasions",
+    "prices": "Tickets £5 (this will include a glass of wine)"
+  },
+  {
+    "id": "social",
+    "title": "Volunteers Social Evening",
+    "start_dttm": "Tuesday 11th June",
+    "venue": "Sonning Common Library",
+    "text": ["An opportunity to meet the committee and other volunteers."]
+  },
+  {
+    "title": "Sonning Common Primary School Fair",
+    "start_dttm": "Saturday 22nd June",
+    "text": ["FoSCL will once again be running stalls at the School Fair.",
+		"A Book Stall and a Tombola Stall",
+		"We will be asking for volunteeers to set up and manage the stalls"]
+  },
+  {
+    "title": "Summer Reading Challenge",
+    "start_dttm": "Saturday 22nd June",
+    "text": ["More details from the library"]
+  },
+  {
+    "title": "National Libraries Week",
+    "start_dttm": "7th October to 12th October 2018",
+    "title_image": {
+      "src": "/images/LibWeekRGB.png",
+      "width": "25%",
+      "position": "top"
+    },
+    "text": ["We are in the process of planning a programme of events"]
+  },
+  {
+    "title": "FoSCL Annual Quiz",
+    "start_dttm": "Friday 11th October 2019",
+    "text": [
+      "We are repeating our very successful Quiz.",
+      "Our Quiz masters will provide a great range of interesting questions. We will have a bar with wine, beer, soft drinks and nibbles available. There will be a raffle with a variety of wonderful prizes.",
+      "Teams of maximum 6 people"
+    ],
+    "tickets": "Tickets will go on sale at the Library and Occasions from 1st September 2019.",
+    "prices": "Tickets £20 per table"
+  },
+  
+ {
+  "title": "FoSCL AGM",
+  "start_dttm": "November 2019",
+		
+ "text": ["The date is yet to be decided"]
+ },
+{
+      "title": "Christmas Refeshments",
+      "start_dttm": "Friday 20th December 2019",
+      "text": ["Do come along and join us"]
+}
 
 ]
