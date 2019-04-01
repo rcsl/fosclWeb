@@ -16,8 +16,8 @@ router.get('/', function (req, res, next) {
 //simple heathcheck
 router.get('/health-check', (req, res) => res.sendStatus(200));
 
-router.get('/shortstory', function (req, res, next) {
-  res.render('shortstory', { title: 'Friends of Sonning Common Library' });
+router.get('/competition', function (req, res, next) {
+  res.render('competition', { title: 'Friends of Sonning Common Library' });
 });
 router.get('/short-story-rules', function (req, res, next) {
   res.render('short-story-rules', { title: 'Friends of Sonning Common Library' });
