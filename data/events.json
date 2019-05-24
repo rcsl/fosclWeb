@@ -13,15 +13,6 @@
        
   },
   {
-    "id" : "writers",
-    "title": "Authors' Evening",
-    "start_dttm": "Tuesday 21st May 2019",
-    "venue": "Sonning Common Library",
-    "text": ["Join Oxford crime writer Peter Tickler and Imogen Matthews - whose latest book is the story of survival in the Netherlands during the second world war."],
-    "tickets": "Tickets will be on sale from 15th April from the Library or Occasions",
-    "prices": "Tickets £5 (this will include a glass of wine)"
-  },
-  {
     "id": "social",
     "title": "Volunteers Social Evening",
     "start_dttm": "Tuesday 11th June",
@@ -37,7 +28,7 @@
   },
   {
     "title": "Summer Reading Challenge",
-    "start_dttm": "Saturday 22nd June",
+    "start_dttm": "Saturday 13th July",
     "text": ["More details from the library"]
   },
   {
