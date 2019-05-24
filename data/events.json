@@ -19,7 +19,8 @@
     "venue": "Sonning Common Library",
     "text": ["An opportunity to meet the committee and other volunteers."]
   },
-  {
+  { 
+    "id": "schooolfair",
     "title": "Sonning Common Primary School Fair",
     "start_dttm": "Saturday 22nd June",
     "text": ["FoSCL will once again be running stalls at the School Fair.",
