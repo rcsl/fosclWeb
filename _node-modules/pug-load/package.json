@@ -1,0 +1,53 @@
+{
+  "_args": [
+    [
+      "pug-load@https://registry.npmjs.org/pug-load/-/pug-load-2.0.6.tgz",
+      "C:\\Users\\mike_\\projects\\foscl\\foscl-web-v1"
+    ]
+  ],
+  "_from": "pug-load@https://registry.npmjs.org/pug-load/-/pug-load-2.0.6.tgz",
+  "_id": "pug-load@2.0.6",
+  "_inBundle": false,
+  "_integrity": "sha1-htpLMcT3b9mkcZgrmz0A5sij+UU=",
+  "_location": "/pug-load",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "pug-load@https://registry.npmjs.org/pug-load/-/pug-load-2.0.6.tgz",
+    "name": "pug-load",
+    "escapedName": "pug-load",
+    "rawSpec": "https://registry.npmjs.org/pug-load/-/pug-load-2.0.6.tgz",
+    "saveSpec": "https://registry.npmjs.org/pug-load/-/pug-load-2.0.6.tgz",
+    "fetchSpec": "https://registry.npmjs.org/pug-load/-/pug-load-2.0.6.tgz"
+  },
+  "_requiredBy": [],
+  "_resolved": "https://registry.npmjs.org/pug-load/-/pug-load-2.0.6.tgz",
+  "_spec": "https://registry.npmjs.org/pug-load/-/pug-load-2.0.6.tgz",
+  "_where": "C:\\Users\\mike_\\projects\\foscl\\foscl-web-v1",
+  "author": {
+    "name": "ForbesLindesay"
+  },
+  "bugs": {
+    "url": "https://github.com/pugjs/pug-load/issues"
+  },
+  "dependencies": {
+    "object-assign": "^4.1.0",
+    "pug-walk": "^1.1.2"
+  },
+  "description": "The Pug loader is responsible for loading the depenendencies of a given Pug file.",
+  "devDependencies": {
+    "pug-lexer": "^3.1.0",
+    "pug-parser": "^2.0.2"
+  },
+  "homepage": "https://github.com/pugjs/pug-load#readme",
+  "keywords": [
+    "pug"
+  ],
+  "license": "MIT",
+  "name": "pug-load",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pugjs/pug-load.git"
+  },
+  "version": "2.0.6"
+}

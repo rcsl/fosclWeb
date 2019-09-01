@@ -13,21 +13,6 @@
        
   },
   {
-    "id": "social",
-    "title": "Volunteers Social Evening",
-    "start_dttm": "Tuesday 11th June",
-    "venue": "Sonning Common Library",
-    "text": ["An opportunity to meet the committee and other volunteers."]
-  },
-  { 
-    "id": "schooolfair",
-    "title": "Sonning Common Primary School Fair",
-    "start_dttm": "Saturday 22nd June",
-    "text": ["FoSCL will once again be running stalls at the School Fair.",
-		"A Book Stall and a Tombola Stall",
-		"We will be asking for volunteeers to set up and manage the stalls"]
-  },
-  {
     "title": "Summer Reading Challenge",
     "start_dttm": "Saturday 13th July",
     "text": ["More details from the library"]
