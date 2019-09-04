@@ -8,6 +8,8 @@ mixin displayNews(item)
     h2 #{item.headline}
     h5 #{item.subhead}
     h5 #{item.byline}
+    if(item.html)
+        p!= item.html
     | !{item.content}
     .clearfix
  

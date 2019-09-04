@@ -1,21 +1,9 @@
-[
+[ 
   {
-    "id": "photo",
-    "title": "Photography Competition",
-    "start_dttm": "Monday 1st April 2019",
-    "text": [
-      "Some say a picture is worth a thousand words - so FoSCL is asking those with an artistic bent to take part in our photography competition.",
-      "The theme wil be the wonderful village of Sonning Common and the beautiful countryside that surrounds it.",
-      "The winning entries will be turned in to postcards!",
-      "If you are thinking of entering please make sure you read the rules."
-    ],
-    "link":{ "destination":"/competition", "text": "How to Enter"}
-       
-  },
-  {
-    "title": "Summer Reading Challenge",
-    "start_dttm": "Saturday 13th July",
-    "text": ["More details from the library"]
+  "title": "Oxfordshire Reads competition",
+  "start_dttm": "Closes Saturday 7th September 2019",
+  "html":"<p><b>Summer Reading Challenge</b> <img src='/images/childs_rocket.png' style='display: inline-block; float:none;' alt='picture of a Rocket'> started on 13th July and finishes on the 4th September.  The theme this year is 'Space Chase' and we had a very good take up. The SRC readers were encouraged by our very enthusiastic young helpers and the Library noticeboard is full of avatars moving towards the finish line...</p><p> We don’t want adults to miss out on reading challenges. There is still time to enter the Oxfordshire County Library Service’s Oxfordshire Reads competition. The <b>closing date is 7th September</b>. Just pick up a postcard from the Library and fill it in with your best reads and you will be entered into the fantastic prize draw. To make it even more interesting, our wonderful Library staff have organised a blind choice by wrapping a selection of books. Take a chance and enter the competition!</p><img src='/images/wrapped-book.jpg' alt='Picture of a wrapped book'/>"
+  
   },
   {
     "title": "National Libraries Week",
@@ -25,8 +13,8 @@
       "width": "25%",
       "position": "top"
     },
-    "text": ["We are in the process of planning a programme of events"]
-  },
+    "html" : "<p>Libraries Week is a celebration of the nation’s much-loved libraries.</p>"
+   },
   {
     "title": "FoSCL Annual Quiz",
     "start_dttm": "Friday 11th October 2019",
@@ -38,17 +26,34 @@
     "tickets": "Tickets will go on sale at the Library and Occasions from 1st September 2019.",
     "prices": "Tickets £20 per table"
   },
-  
- {
-  "title": "FoSCL AGM",
-  "start_dttm": "November 2019",
-		
- "text": ["The date is yet to be decided"]
- },
-{
-      "title": "Christmas Refeshments",
-      "start_dttm": "Friday 20th December 2019",
-      "text": ["Do come along and join us"]
-}
+  {
+    "title": "Half term",
+    "start_dttm": "28th October -3rd November 2019",
+
+    "text": ["Events are in the planning stage"]
+  },
+  {
+    "title": "FoSCL AGM",
+    "start_dttm": "Monday 11th November 2019 at 7pm",
+    "venue": "Sonning Common Library",
+    "text": ["Open to everyone, the agenda will be available in the Library, on the Website and distributed to Friends and Volunteers."]
+  },
+  {
+    "title": "Christmas Refeshments",
+    "start_dttm": "Friday 20th December 2019 from 3pm",
+    "venue" : "Sonning Common Library",
+    "image": {
+      "src": "",
+      "width": "50%",
+      "position": "right"
+    },
+    "html": "<p><img src='/images/xmastree.jpeg' style ='float: left; width:30%; margin-right:40px;'/>Come along and join us from 3pm onwards. An opportunity to meet Volunteers, Friends and Library users over seasonal refreshments and Val's famous punch. Non alcohic versions are available!</p>"
+  },
+  {
+    "title": "MURDER!",
+    "start_dttm": "28th February 2020",
+    "venue" : "Sonning Common Village Hall",
+    "html": "<p>Jointly with the <a href='https://www.chilternplayers.co.uk'>Chiltern players</a>, on Friday 28th February we are staging a Murder Mystery Play in the Village Hall.</p> <p> Tickets £12.50 including fish and chip supper</p> More details to follow</p>."
+  }
 
 ]

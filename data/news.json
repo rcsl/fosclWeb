@@ -1,5 +1,36 @@
-[{
- },    
+[
+  {
+  "headline": "Writers Evening",
+  "subhead" : "Imogen Matthews and Peter Tickler",
+  "pub_date": "2019-09-03",
+  "html" : "<p>The Writers Evening held in the Library on 21th May was well attended and the talks were both interesting and entertaining.</p><p><b>Imogen Matthews</b> spoke about her latest book,<a href='https://www.amazon.co.uk/Hidden-Village-Story-Survival-Holland-ebook/dp/B071HY4RMC'>The Hidden Village</a>, a story of survival in the Netherlands during the second world war.</p><p>Oxford crime writer <b>Peter Tickler</b> whose latest book is <a href='https://www.amazon.co.uk/White-Lies-Deadly-Peter-Tickler/dp/0719828031'>White Lies, Deadly Lies</a> spoke about his life as a writer and what inspired him to start writing.</p>"
+
+ }, {
+  "headline": "Volunteers Social Evening",
+  "subhead" : "11th June 2019",
+  "pub_date": "2019-09-03",
+  "html" : "<p>Graham White spoke about this year’s Summer Reading Challenge, the theme this year is the Space Race.  We also discussed some of the challenges encountered by volunteers and enjoyed tea and cakes and a chat afterwards.</p>"
+
+ },  {
+  "headline": "Sonning Common School Fair",
+  "subhead" : "",
+  "pub_date": "2019-09-03",
+  "html" : "<p>The Fair was popular and thank goodness it was a lovely sunny day. Despite fierce competition from nearby stalls we raised a creditable £115.45 towards Library Funds. Our main aim at events such as the Fair, is to promote the Library. We received some great ideas for next time.</p><p>If you have any thoughts on how we could involve people in their local Library please get in touch.</p><p><a href='mailto friendsofsonningcommonlibrary@gmail.com'>Click here to email friendsofsonningcommonlibrary@gmail.com</a></p>"
+
+ },
+ {
+  "headline": "Events for Children",
+  "subhead" : "",
+  "pub_date": "2019-09-03",
+  "html" : "<p>What a great success both of our sponsored events for children were.</p><p>On Tuesday morning 30th July ArtPod visited the Library. This Space themed art workshop was an event for children aged 6-11. We managed to squeeze in as many children as possible but still some were disappointed. A really creative fun time was had by all,  including the helpers!</p><p>The Master Builders Club came on Wednesday 14th August 2019. This super Space workshop was about a Master Builder going to planet LEG-O. The club was aimed at 5-11 year olds and the demand was so great we had to turn away some children. Again a really success morning.</p><p>We plan to repeat events such as this in the near future</P>"
+
+ }, {
+   "headline": "Craft mornings and cake sales",
+   "pub_date": "2019-09-03",
+   "html" : "<p>Every Saturday in August we held craft mornings and cakes sales in the library. These have been well attended and we are amazed at the wonderful, different ideas Mrs Dunstan finds for each occasion. The money raised by the cake sales funds the craft mornings.</p>"
+
+ },
+
 {    "headline": "Resources for the Library",
     "subhead" : "Have you noticed!",
     "pub_date": "2019-04-01",
