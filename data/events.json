@@ -16,6 +16,7 @@
     "html" : "<p>Libraries Week is a celebration of the nation’s much-loved libraries.</p>"
    },
   {
+    "id": "quiz",
     "title": "FoSCL Annual Quiz",
     "start_dttm": "Friday 11th October 2019",
     "text": [
@@ -33,6 +34,7 @@
     "text": ["Events are in the planning stage"]
   },
   {
+    "id": "agm",
     "title": "FoSCL AGM",
     "start_dttm": "Monday 11th November 2019 at 7pm",
     "venue": "Sonning Common Library",
