@@ -47,7 +47,7 @@ append body
             select(name="reason")
               option.disabled.hidden(value=-1) Please select the closest
               each reason in reasons
-                option(value=reason.val) #{reason.text}
+                option(value=reason.val selected= reason.val==contact.reasonVal) #{reason.text}
             p
             label(for='subject') Subject:
             br

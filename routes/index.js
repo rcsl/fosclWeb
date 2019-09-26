@@ -124,8 +124,20 @@ router.get('/about', function (req, res, next) {
 });
 router.get('/contact', function (req, res, next) {
   //todo we fill options from our database
+
+  // we may receive reason and subject from a link!
   var opts = getOptions();
-  res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', reasons: opts, captchakey: config.captcha.sitekey });
+  var contact = (
+    {
+      name: req.body.name,
+      email: req.body.email,
+      reasonVal: req.query.reason,
+      reason: getMyContactReason(req.query.reason),
+      subject: req.query.subject,
+      message: req.body.message
+    }
+  );
+  res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', contact: contact, reasons: opts, captchakey: config.captcha.sitekey });
 });
 router.post('/contact', function (req, res) {
   var mailOpts, transport;
