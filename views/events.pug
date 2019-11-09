@@ -20,8 +20,9 @@ mixin displayEvent(event)
       if(event.html)
         p!= event.html
       else
-        for paragraph in event.text
-          p=paragraph
+        if(event.text)
+          for paragraph in event.text
+            p=paragraph
       p #{event.tickets}
       p #{event.prices}
       if(event.link)
