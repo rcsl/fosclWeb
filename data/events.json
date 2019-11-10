@@ -1,41 +1,5 @@
 [ 
   {
-  "title": "Oxfordshire Reads competition",
-  "start_dttm": "Closes Saturday 7th September 2019",
-  "html":"<p><b>Summer Reading Challenge</b> <img src='/images/childs_rocket.png' style='display: inline-block; float:none;' alt='picture of a Rocket'> started on 13th July and finishes on the 4th September.  The theme this year is 'Space Chase' and we had a very good take up. The SRC readers were encouraged by our very enthusiastic young helpers and the Library noticeboard is full of avatars moving towards the finish line...</p><p> We don’t want adults to miss out on reading challenges. There is still time to enter the Oxfordshire County Library Service’s Oxfordshire Reads competition. The <b>closing date is 7th September</b>. Just pick up a postcard from the Library and fill it in with your best reads and you will be entered into the fantastic prize draw. To make it even more interesting, our wonderful Library staff have organised a blind choice by wrapping a selection of books. Take a chance and enter the competition!</p><img src='/images/wrapped-book.jpg' alt='Picture of a wrapped book'/>"
-  
-  },
-  {
-    "title": "National Libraries Week",
-    "start_dttm": "7th October to 12th October 2019",
-    "title_image": {
-      "src": "/images/LibWeekRGB.png",
-      "width": "25%",
-      "position": "top"
-    },
-    "html" : "<p>Libraries Week is a celebration of the nation’s much-loved libraries.</p>"
-   },
-  {
-    "id": "quiz",
-    "title": "FoSCL Annual Quiz",
-    "venue" :"Sonning Common Village Hall",
-    "start_dttm": "Friday 11th October 2019, 7pm for 7.30pm",
-
-    "text": [
-      "We are repeating our very successful Quiz.",
-      "Our Quiz masters will provide a great range of interesting questions. We will have a bar with wine, beer, soft drinks and nibbles available. There will be a raffle with a variety of wonderful prizes.",
-      "Teams of maximum 6 people"
-    ],
-    "tickets": "Tickets will go on sale at the Library and Occasions from 1st September 2019.",
-    "prices": "Tickets £20 per table"
-  },
-  {
-    "title": "Half term",
-    "start_dttm": "28th October -3rd November 2019",
-
-    "text": ["Events are in the planning stage"]
-  },
-  {
     "id": "agm",
     "title": "FoSCL AGM",
     "start_dttm": "Monday 11th November 2019 at 7pm",
@@ -43,21 +7,27 @@
     "text": ["Open to everyone, the agenda will be available in the Library, on the Website and distributed to Friends and Volunteers."]
   },
   {
-    "title": "Christmas Refeshments",
-    "start_dttm": "Friday 20th December 2019 from 3pm",
+    "title": "Christmas Refreshments",
+    "start_dttm": "Friday 20th December 2019 from 2.30pm",
     "venue" : "Sonning Common Library",
     "image": {
       "src": "",
       "width": "50%",
       "position": "right"
     },
-    "html": "<p><img src='/images/xmastree.jpeg' style ='float: left; width:30%; margin-right:40px;'/>Come along and join us from 3pm onwards. An opportunity to meet Volunteers, Friends and Library users over seasonal refreshments and Val's famous punch. Non alcohic versions are available!</p>"
+    "html": "<p><img src='/images/xmastree.jpeg' style ='float: left; width:30%; margin-right:40px;'/>Come along and join us from 2.30pm onwards. An opportunity to meet Volunteers, Friends and Library users and to enjoy mince pies and other delicacies, including Val's famous PUNCH and other less alcoholic but interesting drinks. Or even a cup of tea if you prefer!!</p>"
   },
   {
     "title": "MURDER!",
     "start_dttm": "28th February 2020",
     "venue" : "Sonning Common Village Hall",
-    "html": ""
+    "html": "We are joining with the Chiltern Players to hold a Murder Mystery Evening at 7 pm in the Village Hall on Friday 28th February 2020. Including a Fish and Chip supper, tickets will cost £12.50 per person and be on sale in the New Year."
+  },
+  {
+    "title": "Possible Events for next year",
+
+    "html": "<ul> <li>Celebration of 20 years of the Library being in the current building.</li><li>Short Story Competition</li>     <li>Writers evening</li>   <li>Volunteers social evening</li>  <li>Summer Reading Challenge</li>   <li>Oxfordshire Reads</li>    <li>School Fair</li>   <li>Craft mornings</li>    <li>Summer Events for children</li>    <li>National Libraries Week</li>    <li>FoSCL Quiz</li>    <li>New Ideas for 2020</li>"
   }
+
 
 ]
