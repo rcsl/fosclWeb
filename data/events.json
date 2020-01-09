@@ -1,33 +1,13 @@
 [ 
-  {
-    "id": "agm",
-    "title": "FoSCL AGM",
-    "start_dttm": "Monday 11th November 2019 at 7pm",
-    "venue": "Sonning Common Library",
-    "text": ["Open to everyone, the agenda will be available in the Library, on the Website and distributed to Friends and Volunteers."]
-  },
-  {
-    "title": "Christmas Refreshments",
-    "start_dttm": "Friday 20th December 2019 from 2.30pm",
-    "venue" : "Sonning Common Library",
-    "image": {
-      "src": "",
-      "width": "50%",
-      "position": "right"
-    },
-    "html": "<p><img src='/images/xmastree.jpeg' style ='float: left; width:30%; margin-right:40px;'/>Come along and join us from 2.30pm onwards. An opportunity to meet Volunteers, Friends and Library users and to enjoy mince pies and other delicacies, including Val's famous PUNCH and other less alcoholic but interesting drinks. Or even a cup of tea if you prefer!!</p>"
-  },
-  {
+   {
     "title": "MURDER!",
     "start_dttm": "28th February 2020",
     "venue" : "Sonning Common Village Hall",
-    "html": "We are joining with the Chiltern Players to hold a Murder Mystery Evening at 7 pm in the Village Hall on Friday 28th February 2020. Including a Fish and Chip supper, tickets will cost £12.50 per person and be on sale in the New Year."
+    "html": "<p>We are joining with the Chiltern Players to hold a Murder Mystery Evening at 7 pm in the Village Hall on Friday 28th February 2020.</p><p>Tickets on sale from Occassions and the Library from 13th January</p><p>Licensed bar</p><p>£12.50 per person which includes a Fish and Chip supper</p>"
   },
   {
-    "title": "Possible Events for next year",
-
-    "html": "<ul> <li>Celebration of 20 years of the Library being in the current building.</li><li>Short Story Competition</li>     <li>Writers evening</li>   <li>Volunteers social evening</li>  <li>Summer Reading Challenge</li>   <li>Oxfordshire Reads</li>    <li>School Fair</li>   <li>Craft mornings</li>    <li>Summer Events for children</li>    <li>National Libraries Week</li>    <li>FoSCL Quiz</li>    <li>New Ideas for 2020</li>"
+    "title": "Events being planned for this year",
+    "start_dttm": "Dates will be announced shortly",
+    "html": "<ul> <li>Celebration of 20 years of the Library being in the current building.</li><li>Short Story Competition</li>     <li>Writers evening</li>   <li>Volunteers social evening</li>  <li>Summer Reading Challenge</li>   <li>Oxfordshire Reads</li>    <li>School Fair</li>   <li>Craft mornings</li>    <li>Summer Events for children</li>    <li>National Libraries Week</li>    <li>FoSCL Quiz</li>    <li>New Ideas for 2020</li></ul>"
   }
-
-
 ]
