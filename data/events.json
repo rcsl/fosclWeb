@@ -1,12 +1,12 @@
 [ 
    {
     "title": "MURDER!",
-    "start_dttm": "28th February 2020",
+    "start_dttm": "7pm Friday 28th February 2020",
     "venue" : "Sonning Common Village Hall",
-    "html": "<p>We are joining with the Chiltern Players to hold a Murder Mystery Evening at 7 pm in the Village Hall on Friday 28th February 2020.</p><p>Tickets on sale from Occassions and the Library from 13th January</p><p>Licensed bar</p><p>£12.50 per person which includes a Fish and Chip supper</p>"
+    "html": "<img src='/images/chilterplayerslogo.jpg' style ='float: left; width:15%; margin-right:40px;'/>  <p>We are joining with the Chiltern Players to hold a Murder Mystery Evening at 7 pm in the Village Hall on Friday 28th February 2020.</p><p>Tickets on sale from Occassions and the Library from 13th January</p><p>Licensed bar</p><p>£12.50 per person which includes a Fish and Chip supper</p>"
   },
   {
-    "title": "Events being planned for this year",
+    "title": "Other events being planned for this year",
     "start_dttm": "Dates will be announced shortly",
     "html": "<ul> <li>Celebration of 20 years of the Library being in the current building.</li><li>Short Story Competition</li>     <li>Writers evening</li>   <li>Volunteers social evening</li>  <li>Summer Reading Challenge</li>   <li>Oxfordshire Reads</li>    <li>School Fair</li>   <li>Craft mornings</li>    <li>Summer Events for children</li>    <li>National Libraries Week</li>    <li>FoSCL Quiz</li>    <li>New Ideas for 2020</li></ul>"
   }
