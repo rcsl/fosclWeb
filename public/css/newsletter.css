@@ -101,6 +101,9 @@ h1, h2 , h3 {
   font-size: 20px;
   font-weight: bold;
 }
+@page {
+    size: A4;
+ }
 @media print {
   .article {
     font-size: 1.3em;
@@ -110,12 +113,12 @@ h1, h2 , h3 {
 
     height: 1500px;
   }
-  @page {
-    margin: 0.5cm;
+  
+  html, body {
+    width: 210mm;
+    height: 297mm;
   }
-  .page {
-    height: 1400px;
-  }
+  
   h1 {
     font-size: 220%;
   }
