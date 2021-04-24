@@ -4,23 +4,32 @@
     [ 
       {
         "title": "Sonning Common School Fair",
-        "html": "<p>Once we receive confirmation we plan to run two stalls at the Fair.</p><p>A book sale and  a new game for 2021</p>"
+        "html": "<p>Unfortunately due to Covid restrictions this event will not held this year.</p>"
   },
   {
          "title": "21st Anniversary",
-         "html": "<p>The Library has been in it's current building for 21 years and we intend to celebrate by hosting several events throughout the year.</p>"
+         "html": "The Library has been in it's current building for 21 years and we intend to celebrate by hosting several events throughout the year."
   },
   {
          "title": "Summer Reading Challenge",
          "html": "<p>The subject this year will be “Wild World Heroes” and starts on July 14th and finishes on September 11th.</p>"
   },
-  {
-         "title": "Summer Holidays",
-         "html": "<p>During the summer we will be organising several events for children - Lego Masters, an art event and several more, we will keep you informed.</p>"
+ {
+         "title": "Authors' Evening",
+         "start_dttm": "20th July 2021",
+         "html": "<p>The subject this year will be “Wild World Heroes” and starts on July 14th and finishes on September 11th.</p>"
   },
   {
+         "title": "Summer Holidays",
+         "html": "<p>During the summer we will be organising several events for children. Including:-</p><ul><li>August 18th Zoo Lab</li><li>Lego&reg; Masters</li><li>Art Pod Workshop</li></ul>"
+  },
+  {
+       "title": "Poetry Workshop",
+       "start_dttm": "14th September 2021"
+},
+  {
          "title": "National Libraries Week",
-         "html": "<p>October - date to be confirmed</p>"
+         "start_dttm": "October 4th -10th"
   },
   {
          "title": "FoSCL Quiz",
@@ -34,7 +43,7 @@
   },
   {
          "title": "Christmas Celebration",
-         "start_dttm": "22nd December 2020",
+         "start_dttm": "22nd December 2021",
          "html": "<p>Do come and join us in the Library on Wednesday 22nd December from 2.30 pm.</p>"
   }
     ]
