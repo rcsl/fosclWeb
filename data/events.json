@@ -1,10 +1,10 @@
 {
-  "header": "Here is our hoped for list for the year!",
   "events":
     [ 
       {
-        "title": "Sonning Common School Fair",
-        "html": "<p>Unfortunately due to Covid restrictions this event will not held this year.</p>"
+        "title": "I SPY Trail",
+        "start_dttm": "29th May 2021 - 12th June 2021",
+        "html": "<p>Click on the links in the image to take part</p><img src='images/trail.png' usemap='#workmap'/> <map name='workmap'> <area shape='rect' coords='0,750,355,890' alt='Clues' href='download/i=spy-clues'> <area shape='rect' coords='325,920,782,1070' alt='Phone' href='download/i-spy-answersheet'> </map><p>Or download the instructions from <a href='download'>here</a> (also available from the library).</p>"
   },
   {
          "title": "21st Anniversary",
