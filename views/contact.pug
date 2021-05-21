@@ -36,6 +36,7 @@ append body
             br
             label(for='name') Name: 
             br
+            input(name='id', type='hidden'  id='id')
             input(name='name', type='text', value=(undefined===contact ? '' : contact.name) , id='name')
             p
             label(for='email') Email:

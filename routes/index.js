@@ -146,8 +146,6 @@ router.post('/contact', function (req, res) {
   req.sanitize('email').escape().trim();
   req.sanitize('subject').escape().trim();
   req.sanitize('message').escape().trim();
-
-
   req.checkBody('name', "Name is required").notEmpty();
   req.checkBody('email', "Your email address is required").notEmpty();
   req.checkBody('reason', "A reason is required").notEmpty().isValidId(config.contactUs.list);
@@ -168,6 +166,14 @@ router.post('/contact', function (req, res) {
       message: req.body.message
     }
   );
+// if there is anything in our hidden id field it has been filled by a bot
+    if(req.body.id){
+         // we tell client we are done but do nothing at all!
+         res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', reasons: opts, msg: 'Your request has been denied by our spam filter. If a genuine request please find another way to contact the library.', err: false, contact: contact });
+         return;
+    }        
+   
+
   if (errors) {     // Render the form using error information
     res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', reasons: opts, captchakey: config.captcha.sitekey, contact: contact, errors: errors });
     return;
