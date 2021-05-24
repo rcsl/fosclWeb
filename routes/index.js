@@ -1,11 +1,15 @@
 const express = require('express');
 const router = express.Router();
+//var bodyParser = require('body-parser');
 const config = require('../config.js');
 const pugCompiler = require('../modules/pugCompiler');
 const downloads = require('../data/download.json');
+const { check, validationResult } = require('express-validator');
 
 const assert = require('assert');
 const request = require('request');
+
+
 
 
 /* GET home page. */
@@ -54,57 +58,7 @@ router.get('/download/:item', function (req, res) {
     res.status(404).render('download404.pug', { title: 'Friends of Sonning Common Library - Downloads', link: reqLink });
   }
 });
-/*
-router.get('/download/:file', function(req, res){
-  var file;
-  var path = "public/downloads/";
-  var requested = req.params['file'];
-  switch(requested){
-    case 'constitution': 
-        file = 'foscl-constitution.pdf';
-        break;
-    case 'entryform':
-        file = 'shortstory-entryform.pdf';
-        break;
-    case 'membership':
-        file = 'foscl-membership-form.pdf';
-        break;
-    case 'agm' :
-        file = 'foscl-agm-2016.pdf';
-        break;
-    case 'bylaws':
-        file = 'foscl-bylaws.pdf';
-        break;
-    case 'gift-aid' :
-        file = 'foscl-GiftAidDeclaration.pdf';
-        break;
-    case 'renewal' :
-        file ='foscl-membership-renewal.pdf';
-        break;
-    case 'foscl-newsletter-1706':
-      file = 'foscl-newsletter-1706.pdf';
-      break;
-    default: 
-        file="";
-  }
-  if(file.length>4){
-      //valid file
-      res.download(path + file, function(err){
-            // file not found
-      });
-    }
-  // if we get here NO FILE
-  
-});
-router.get('/entryform', function (req, res) {
-  var file = 'public/downloads/shortstory-entryform.pdf';
-  res.download(file, function (err) {
-    if (err) {
-      // Handle error, but keep in mind the response may be partially-sent
-      res.headersSent;
-    }
-  }); // redirect to calling page with message
-});*/
+
 router.get('/events', function (req, res, next) {
   //todo we fill options from our database
   var events = require('../data/events.json');
@@ -139,20 +93,24 @@ router.get('/contact', function (req, res, next) {
   );
   res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', contact: contact, reasons: opts, captchakey: config.captcha.sitekey });
 });
-router.post('/contact', function (req, res) {
+
+
+var contactValidate = [
+  // Check Username
+  check('name', 'Name is required').notEmpty().trim().escape(), 
+  check('email').notEmpty().withMessage("Your email address is required").isEmail().withMessage("Email is not in a recognised format (eg. someone@example.com)").trim().escape().normalizeEmail(),
+  check('reason', "A valid reason is required").isInt({min:0}), 
+  check('subject', "Subject is required").notEmpty().trim().escape(), 
+  check('message', 'Please add a message or question').notEmpty().trim().escape()
+
+];
+
+router.post('/contact', contactValidate, (req, res)=> {
   var mailOpts, transport;
 
-  req.sanitize('name').escape().trim();
-  req.sanitize('email').escape().trim();
-  req.sanitize('subject').escape().trim();
-  req.sanitize('message').escape().trim();
-  req.checkBody('name', "Name is required").notEmpty();
-  req.checkBody('email', "Your email address is required").notEmpty();
-  req.checkBody('reason', "A reason is required").notEmpty().isValidId(config.contactUs.list);
-  req.checkBody('email', "Email is not in a recognised format (eg. someone@example.com)").isEmail();
-  req.checkBody('message', 'Please add a message or question').notEmpty();
+ 
 
-  var errors = req.validationErrors();
+  var errors = validationResult(req);
   var opts = getOptions();
 
   var selectedReason = getMyContactReason(req.body.reason);
@@ -174,8 +132,8 @@ router.post('/contact', function (req, res) {
     }        
    
 
-  if (errors) {     // Render the form using error information
-    res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', reasons: opts, captchakey: config.captcha.sitekey, contact: contact, errors: errors });
+  if (!errors.isEmpty()) {     // Render the form using error information
+    res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', reasons: opts, captchakey: config.captcha.sitekey, contact: contact, errors: errors.errors });
     return;
   }
   // no form errors -- how about captcha
@@ -249,6 +207,9 @@ router.get('/swatch', function (req, res, next) {
 router.get('/register', function (req, res, next) {
   res.render('register', { title: 'Friends of Sonning Common Library - Register' });
 });
+
+
+
 
 // helper functions
 

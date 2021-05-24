@@ -3,8 +3,10 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var expressValidator = require('express-validator');
+//var bodyParser = require('body-parser');
+//var expressValidator = require('express-validator');
+const { check, validationResult } = require('express-validator');
+
 var helmet = require('helmet');
 
 
@@ -27,20 +29,21 @@ app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(helmet());
 app.use(logger('dev'));
 
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(expressValidator({
-  customValidators:{
-    isValidId : function (value, array){
-      // expect an array of valid objects that contain an field called id
-      return array.some(i => {
-        return i.id==parseInt(value);
-      });
-   
-  }
-}
-}));
+// check this!!
+app.use(express.json());
+app.use(express.urlencoded()); //Parse URL-encoded bodies
+// app.json(); included in 4.16
+// app.bodyParser.urlencoded();
+// app.use(expressValidator({
+//   customValidators:{
+//     isValidId : function (value, array){
+//       // expect an array of valid objects that contain an field called id
+//       return array.some(i => {
+//         return i.id==parseInt(value);
+//       }); 
+//   }
+// }
+// }));
 
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
