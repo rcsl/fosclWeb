@@ -28,8 +28,8 @@ app.use(helmet());
 app.use(logger('dev'));
 
 // check this!!
-app.use(express.json());
-app.use(express.urlencoded({ extended: true })); //Parse URL-encoded bodies
+//app.use(express.json());
+//app.use(express.urlencoded({ extended: true })); //Parse URL-encoded bodies
 
 
 app.use(cookieParser());
