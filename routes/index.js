@@ -113,7 +113,7 @@ router.post('/contact', contactValidate, (req, res)=> {
   var opts = getOptions();
 
   var selectedReason = getMyContactReason(req.body.reason);
-  var contact = npm (
+  var contact = (
     {
       name: req.body.name,
       email: req.body.email,
