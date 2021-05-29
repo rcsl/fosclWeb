@@ -3,9 +3,7 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
-//var bodyParser = require('body-parser');
-//var expressValidator = require('express-validator');
-const { check, validationResult } = require('express-validator');
+//const { check, validationResult } = require('express-validator');
 
 var helmet = require('helmet');
 

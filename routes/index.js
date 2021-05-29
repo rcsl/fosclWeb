@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-//var bodyParser = require('body-parser');
 const config = require('../config.js');
 const pugCompiler = require('../modules/pugCompiler');
 const downloads = require('../data/download.json');
@@ -114,7 +113,7 @@ router.post('/contact', contactValidate, (req, res)=> {
   var opts = getOptions();
 
   var selectedReason = getMyContactReason(req.body.reason);
-  var contact = (
+  var contact = npm (
     {
       name: req.body.name,
       email: req.body.email,
