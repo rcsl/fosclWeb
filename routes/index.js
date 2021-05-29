@@ -3,7 +3,7 @@ const router = express.Router();
 const config = require('../config.js');
 const pugCompiler = require('../modules/pugCompiler');
 const downloads = require('../data/download.json');
-const { check, validationResult } = require('express-validator');
+// const { check , validationResult } = require('express-validator');
 
 const assert = require('assert');
 const request = require('request');
@@ -80,20 +80,25 @@ router.get('/contact', function (req, res, next) {
 
   // we may receive reason and subject from a link!
   var opts = getOptions();
-  var contact = (
-    {
-      name: req.body.name,
-      email: req.body.email,
-      reasonVal: req.query.reason,
-      reason: getMyContactReason(req.query.reason),
-      subject: req.query.subject,
-      message: req.body.message
-    }
-  );
+  var contact ={};
+  // var contact = (
+  //   {
+  //     name: req.body.name,
+  //     email: req.body.email,
+  //     reasonVal: req.query.reason,
+  //     reason: getMyContactReason(req.query.reason),
+  //     subject: req.query.subject,
+  //     message: req.body.message
+  //   }
+  // );
   res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', contact: contact, reasons: opts, captchakey: config.captcha.sitekey });
 });
 
 
+router.post('/contact', (req, res)=> {
+  res.send("Internal Server Issue: We are working to resolve the problem - please contact the library by phone or in person<br/><br/> <a href='/'>Take me home</a>");
+});
+/*
 var contactValidate = [
   // Check Username
   check('name', 'Name is required').notEmpty().trim().escape(), 
@@ -110,6 +115,7 @@ router.post('/contact', contactValidate, (req, res)=> {
  
 
   var errors = validationResult(req);
+
   var opts = getOptions();
 
   var selectedReason = getMyContactReason(req.body.reason);
@@ -184,7 +190,7 @@ router.post('/contact', contactValidate, (req, res)=> {
       });
     });
   });
-
+*/
 
   /*
   
@@ -194,8 +200,8 @@ router.post('/contact', contactValidate, (req, res)=> {
         
   
     });
-  */
-});
+  
+});*/
 
 router.get('/join', function (req, res, next) {
   res.render('register', { title: 'Friends of Sonning Common Library' });
