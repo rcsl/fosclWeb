@@ -3,7 +3,7 @@ const router = express.Router();
 const config = require('../config.js');
 const pugCompiler = require('../modules/pugCompiler');
 const downloads = require('../data/download.json');
-const { body, validationResult } = require('express-validator');
+const { check, validationResult } = require('express-validator');
 
 const assert = require('assert');
 const request = require('request');
