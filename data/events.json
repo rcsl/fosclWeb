@@ -1,31 +1,52 @@
 {
-  "events":
+  "header": "The events we hope to hold in 2021",
+  "events": 
+       
     [ 
+       {
+         "title": "21st Anniversary",
+         "html": "The Library has been in it's current building for 21 years and we intend to celebrate by hosting several events throughout the year.<br/>We will be purchasing at least 210 books for the library, your suggestions are most welcome."
+       },
       {
         "title": "I SPY Trail",
         "start_dttm": "29th May 2021 - 12th June 2021",
         "html": "<p>Click on the links in the image to take part</p><img src='images/trail.png' usemap='#workmap'/> <map name='workmap'> <area shape='rect' coords='0,750,355,890' alt='Clues' href='download/i=spy-clues'> <area shape='rect' coords='325,920,782,1070' alt='Phone' href='download/i-spy-answersheet'> </map><p>Or download the instructions from <a href='download'>here</a> (also available from the library).</p>"
   },
   {
-         "title": "21st Anniversary",
-         "html": "The Library has been in it's current building for 21 years and we intend to celebrate by hosting several events throughout the year."
-  },
-  {
-         "title": "Summer Reading Challenge",
-         "html": "<p>The subject this year will be “Wild World Heroes” and starts on July 14th and finishes on September 11th.</p>"
+         "title": "Summer Reading Challenge",         
+        "start_dttm": "10th July 2021 - 11thSeptember 2021",
+         "html": "<p>The subject this year will be “Wild World Heroes”.</p>"
   },
  {
          "title": "Authors' Evening",
          "start_dttm": "20th July 2021",
-         "html": "<p>The subject this year will be “Wild World Heroes” and starts on July 14th and finishes on September 11th.</p>"
+         "tickets": "Tickets are £5 (to include a glass of wine or a soft drink) and will be available in the library from June 21st",
+         "html": "<p>This year our invited speakers will be two wonderful Oxfordshire writers,</p> <p>Sylvia Vetta&nbsp;&nbsp;&nbsp;&nbsp;author of Brushstrokes in Time, Not so Black and White</p><p>Loraine Fergusson&nbsp;&nbsp;&nbsp;&nbsp;author of The Angel, A Serpent’s Tooth</p>"
   },
   {
          "title": "Summer Holidays",
-         "html": "<p>During the summer we will be organising several events for children. Including:-</p><ul><li>August 18th Zoo Lab</li><li>Lego&reg; Masters</li><li>Art Pod Workshop</li></ul>"
+         "html": "<p>During the summer we will be organising several events for children aged 5 - 11. </p>"
   },
   {
-       "title": "Poetry Workshop",
-       "start_dttm": "14th September 2021"
+       "title": "Art Pod Workshop",       
+       "start_dttm": "27th July 2021 10am"
+      
+},
+{
+     "title": "Lego Masters",       
+     "start_dttm": "10th August 2021 9:30am"
+    
+},
+{
+     "title": "Zoo Lab",       
+     "start_dttm": "18th August 2021 10am"
+    
+},
+  
+  {
+       "title": "Creative Writing Workshop",
+       "start_dttm": "14th September 2021",
+       "html": "This event will be run by Poet and Children’s writer Rachel Piercy her pamphlets - The Flower and the Plough, Rivers Wanted and Disappointing Alice and her new picture book - If you go down to the woods today."
 },
   {
          "title": "National Libraries Week",
@@ -34,7 +55,7 @@
   {
          "title": "FoSCL Quiz",
          "start_dttm": "Friday 8th October",
-         "html": "<p>Friday 8th October in Sonning Common Village Hall</p>"
+         "html": "<p>Friday 8th October in Sonning Common Village Hall</p><p>Our Quiz Masters will be Jill and John Hutchinson and there will be a raffle and of course a bar with wine, beer, soft drinks and nibbles.</p>"
   },
   {
          "title": "AGM",

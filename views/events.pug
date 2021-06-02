@@ -31,7 +31,7 @@ mixin displayEvent(event)
 
 append body
   h1 Forthcoming Events
-  h2 #{events.header}
+  h3 #{events.header}
   .container
     each event in events.events
       +displayEvent(event)
