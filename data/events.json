@@ -7,11 +7,7 @@
          "title": "21st Anniversary",
          "html": "The Library has been in it's current building for 21 years and we intend to celebrate by hosting several events throughout the year.<br/>We will be purchasing at least 210 books for the library, your suggestions are most welcome."
        },
-      {
-        "title": "I SPY Trail",
-        "start_dttm": "29th May 2021 - 12th June 2021",
-        "html": "<p>Click on the links in the image to take part</p><img src='images/trail.png' usemap='#workmap'/> <map name='workmap'> <area shape='rect' coords='0,750,355,890' alt='Clues' href='download/i=spy-clues'> <area shape='rect' coords='325,920,782,1070' alt='Phone' href='download/i-spy-answersheet'> </map><p>Or download the instructions from <a href='download'>here</a> (also available from the library).</p>"
-  },
+     
   {
          "title": "Summer Reading Challenge",         
         "start_dttm": "10th July 2021 - 11thSeptember 2021",
@@ -19,8 +15,7 @@
   },
  {
          "title": "Authors' Evening",
-         "start_dttm": "20th July 2021",
-         "tickets": "Tickets are £5 (to include a glass of wine or a soft drink) and will be available in the library from June 21st",
+         "start_dttm": "Postponed",
          "html": "<p>This year our invited speakers will be two wonderful Oxfordshire writers,</p> <p>Sylvia Vetta&nbsp;&nbsp;&nbsp;&nbsp;author of Brushstrokes in Time, Not so Black and White</p><p>Loraine Fergusson&nbsp;&nbsp;&nbsp;&nbsp;author of The Angel, A Serpent’s Tooth</p>"
   },
   {
@@ -29,8 +24,7 @@
   },
   {
        "title": "Art Pod Workshop",       
-       "start_dttm": "27th July 2021 10am",
-       "tickets": "Tickets will be on sale in the Library from 1st July. The subsidised ticket price will be £5 per child (second child in the family £2)"
+       "start_dttm": "Postponed"
       
 },
 {

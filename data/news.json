@@ -1,5 +1,23 @@
-[  
-    {
+[   
+  {
+    "headline": "Postponed Events",
+    "subhead" : "",
+    "pub_date": "2021-07-02",
+    "html" : "<p>We are sorry to inform you that the Authors’ Evening and the Art Pod Workshop have both been postponed.</p>"
+  },
+  {
+    "headline": "I SPY Trail",
+    "subhead" : "29th May 2021 - 12th June 2021",
+    "pub_date": "2021-07.02",
+    "html" : "<p>Alison Smith devised the splendid trail around the Village. Everyone young and old enjoyed following the clues to the library. Congratulations to Ben James, the lucky winner of a book voucher. Ben lives in Bath and was visiting his grandparents when he and his sisters Eliza and Meredith took part in the trail. Ben is 13 and goes to school in Midsomer Norton in  Somerset.  He is an avid reader and Michael Morpurgo, Michael Grant and Steven king are some of his favourite authors.</p>"
+  },
+  {
+    "headline": "YOUR LIBRARY IS NOW OPEN!!!",
+    "subhead" : "12th Apil 2021",
+    "pub_date": "2021-07-01",
+    "html" : "<p>Unfortunately the library closed again in the New Year but we were able to offer a home library service to our readers. Return dates for books were extended until May. </p>"
+  },
+  {
     "headline": "Library Re-opening",
     "subhead" : "Important Message from Rosemary - September 2020",
     "pub_date": "2020-09-27",

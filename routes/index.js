@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
+fs = require('fs');
 const config = require('../config.js');
 const pugCompiler = require('../modules/pugCompiler');
-const downloads = require('../data/download.json');
+
 // const { check , validationResult } = require('express-validator');
 
 const assert = require('assert');
@@ -28,8 +29,17 @@ router.get('/short-story-rules', function (req, res, next) {
 // downloads/shortstory-entryform.pdf
 
 router.get('/download', function (req, res) {
-  //pass json content to page
-  res.render('download', { downloads: downloads, title: 'Friends of Sonning Common Library - Downloads' });
+  fs.readFile('./data/download.json', 'utf8', function (err, data) {
+    if (err) {
+      res.status(404).send("<br>Resource not found<br/><br/><p><a href='/'>Take me home</a>");
+    }
+    else {
+      const content = JSON.parse(data.toString());
+      res.render('download', { downloads: content, title: 'Friends of Sonning Common Library - Downloads' });
+    }
+  });
+
+ 
 });
 
 router.get('/download/:item', function (req, res) {
@@ -60,16 +70,31 @@ router.get('/download/:item', function (req, res) {
 
 router.get('/events', function (req, res, next) {
   //todo we fill options from our database
-  var events = require('../data/events.json');
-  res.render('events', { events: events, title: 'Friends of Sonning Common Library - Events' });
+  fs.readFile('./data/events.json', 'utf8', function (err, data) {
+    if (err) {
+      res.status(404).send("<br>Resource not found<br/><br/><p><a href='/'>Take me home</a>");
+    }
+    else {
+      const content = JSON.parse(data.toString());
+      res.render('events', { events: content, title: 'Friends of Sonning Common Library - Events' });
+    }
+  });
+  // var events = require('../data/events.json');
+  // res.render('events', { events: events, title: 'Friends of Sonning Common Library - Events' });
 });
 router.get('/news', function (req, res, next) {
   //todo we fill options from our database
   var news = require('../data/news.json');
-  //sort news by pub date here
-  news.sort(comparePublishedDate);
+  fs.readFile('./data/news.json', 'utf8', function (err, data) {
+    if (err) {
+      res.status(404).send("<br>Resource not found<br/><br/><p><a href='/'>Take me home</a>");
+    }
+    else {
+      const news = JSON.parse(data.toString());
+      res.render('news', { news: news.sort(comparePublishedDate), title: 'Friends of Sonning Common Library - Latest' });
+    }
+  });
 
-  res.render('news', { news: news.sort(comparePublishedDate), title: 'Friends of Sonning Common Library - Latest' });
 });
 router.get('/about', function (req, res, next) {
   //todo we fill options from our database
@@ -79,8 +104,8 @@ router.get('/contact', function (req, res, next) {
   //todo we fill options from our database
 
   // we may receive reason and subject from a link!
-  var opts = getOptions();
-  var contact ={};
+ // var opts = getOptions();
+ // var contact ={};
   // var contact = (
   //   {
   //     name: req.body.name,
@@ -91,7 +116,7 @@ router.get('/contact', function (req, res, next) {
   //     message: req.body.message
   //   }
   // );
-  res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us', contact: contact, reasons: opts, captchakey: config.captcha.sitekey });
+  res.render('contact', { title: 'Friends of Sonning Common Library - Contact Us'});
 });
 
 

@@ -4,12 +4,7 @@ block link
   -var activeMenu = 'Contact Us';
 
 append head
-  script.
-    function onSubmit() {
-      alert("The form was submitted");
-      document.getElementById("contactus").submit();
-    }
-  
+  script(src='https://www.google.com/recaptcha/api.js')
 append body
   .container
 
@@ -41,6 +36,7 @@ append body
             br
             label(for='name') Name: 
             br
+            input(name='id', type='hidden'  id='id')
             input(name='name', type='text', value=(undefined===contact ? '' : contact.name) , id='name')
             p
             label(for='email') Email:

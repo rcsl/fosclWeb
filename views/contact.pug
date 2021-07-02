@@ -3,8 +3,7 @@ extends ../layouts/foscl
 block link
   -var activeMenu = 'Contact Us';
 
-append head
-  script(src='https://www.google.com/recaptcha/api.js')
+
 append body
   .container
 
@@ -24,60 +23,10 @@ append body
       br
       h3 Friends of Sonning Common Library
       br
-      p If you would like more information about FoSCL or our activities the easiest way to contact us is using the contact form on this page.
+      p If you would like more information about FoSCL, our activities or would like to offer your support
+      p email : #[a(href='mailto:friendsofsonningcommonlibrary@gmail.com') friendsofsonningcommonlibrary@gmail.com]
       br
       h3 Volunteering
       br
       p If you are interested in volunteering please ask in the library or contact #[a(href='https://www.oxfordshire.gov.uk/cms/public-site/volunteering-oxfordshire-libraries') Oxfordshire Libraries] via their website.
-    .col-md-6
-      if undefined === err 
-        form(action='/contact', name='contactus', id='contactus', method='post')
-          fieldset
-            br
-            label(for='name') Name: 
-            br
-            input(name='id', type='hidden'  id='id')
-            input(name='name', type='text', value=(undefined===contact ? '' : contact.name) , id='name')
-            p
-            label(for='email') Email:
-            br
-            input(name='email', type='text', value=(undefined===contact ? '' : contact.email), id='email')
-            p
-            label(for='email') So we can direct your enquiry please tell us why you are contacting us
-            br
-            select(name="reason")
-              option.disabled.hidden(value=-1) Please select the closest
-              each reason in reasons
-                option(value=reason.val selected= reason.val==contact.reasonVal) #{reason.text}
-            p
-            label(for='subject') Subject:
-            br
-            input(name='subject', type='text', value=(undefined===contact ? '' : contact.subject), id='subject')
-            p
-            label(for='message') Message:
-            br
-            textarea(name='message', cols='40', rows='10', id='message')=(undefined===contact ? '' : contact.message)
-            p
-            .g-recaptcha(data-sitekey=captchakey)
-            p
-            input(name='submit', type='submit', value='Send', id='submit')
-            br
-        br
-        if errors 
-          +panel-danger("Please correct the following and try again")
-            ul
-            for error in errors
-              li!= error.msg
-      else
-        if err
-          +panel-danger("Unexpected Error")
-            p=msg
-        else
-          +panel-success(msg)
-            p Name    : !{contact.name}
-            p Email   : !{contact.email}
-            p Reason  : !{contact.reason}
-            p Subject : !{contact.subject}
-            br
-            h3 Your message
-            p=contact.message
+    
