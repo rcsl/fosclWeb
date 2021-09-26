@@ -1,19 +1,21 @@
 [   
+  {
+  "headline": "Zoo Lab",
+  "subhead" : "18th August 2021",
+  "pub_date": "2021-09-25",
+  "html" : "<img src='/images/zoo-lab-210818.jpg' style ='float: right; width:25%; margin-left:40px;'/><p>Thirty children came to see the animals and discovered lots of interesting information about those creatures.  They went home happily regaling the facts they had discovered.</p><br><p>The event proved so popular we have asked Zoo Lab to visit the library again during October half term.</p>"
+},
+{
+  "headline": "Lego Masters",
+  "subhead" : "10th August 2021",
+  "pub_date": "2021-09-25",
+  "html" : "<img src='/images/lego-masters-210925.jpg' style ='float: left; width:25%; margin-right:40px;'/><p>The Master builders workshop proved a great success.</p><br><p>The theme was Wild World Heroes. The twenty five children who came were enthralled with the stories and built some fantastic structures.</p>"
+},
 {
   "headline": "Art Pod Workshop",
   "subhead" : "Saturday 24th July",
   "pub_date": "2021-09-25",
   "html" : "<p>Thanks to Elaine and her young helpers we did manage to hold a smaller but very inventive Art Pod workshop.  This was well attended and the children loved it.</p>"
-}, {
-  "headline": "Lego Masters",
-  "subhead" : "10th August 2021",
-  "pub_date": "2021-09-25",
-  "html" : "<img src='/images/lego-masters-210925.jpg' style ='float: left; width:25%; margin-right:40px;'/><p>The Master builders workshop proved a great success.</p><br><p>The theme was Wild World Heroes. The twenty five children who came were enthralled with the stories and built some fantastic structures.</p>"
-}, {
-  "headline": "Zoo Lab",
-  "subhead" : "18th August 2021",
-  "pub_date": "2021-09-25",
-  "html" : "<img src='/images/zoo-lab-210818.jpg' style ='float: right; width:25%; margin-left:40px;'/><p>Thirty children came to see the animals and discovered lots of interesting information about those creatures.  They went home happily regaling the facts they had discovered.</p><br><p>The event proved so popular we have asked Zoo Lab to visit the library again during October half term.</p>"
 },
 
 
