@@ -7,57 +7,25 @@
          "title": "21st Anniversary",
          "html": "The Library has been in it's current building for 21 years and we intend to celebrate by hosting several events throughout the year.<br/>We will be purchasing at least 210 books for the library, your suggestions are most welcome."
        },
-     
-  {
-         "title": "Summer Reading Challenge",         
-        "start_dttm": "10th July 2021 - 11thSeptember 2021",
-         "html": "<p>The subject this year will be “Wild World Heroes”.</p>"
-  },
  {
          "title": "Authors' Evening",
-         "start_dttm": "Postponed",
-         "html": "<p>This year our invited speakers will be two wonderful Oxfordshire writers,</p> <p>Sylvia Vetta&nbsp;&nbsp;&nbsp;&nbsp;author of Brushstrokes in Time, Not so Black and White</p><p>Loraine Fergusson&nbsp;&nbsp;&nbsp;&nbsp;author of The Angel, A Serpent’s Tooth</p>"
+         "start_dttm": "Postponed until next Spring",
+         "html": "<p>When we hopt to welcome two wonderful Oxfordshire writers,</p> <p>Sylvia Vetta author of Brushstrokes in Time, Not so Black and White</p><p>Loraine Fergusson author of The Angel, A Serpent’s Tooth</p>"
   },
-  {
-         "title": "Summer Holidays",
-         "html": "<p>During the summer we will be organising several events for children aged 5 - 11. </p>"
-  },
-  {
-       "title": "Art Pod Workshop",       
-       "start_dttm": "Postponed"
-      
-},
-{
-     "title": "Lego Masters",       
-     "start_dttm": "10th August 2021 9:30am",
-     "tickets": "Tickets will be on sale in the Library from 1st July. The subsidised ticket price will be £5 per child (second child in the family £2)"
-    
-},
-{
-     "title": "Zoo Lab",       
-     "start_dttm": "18th August 2021 10am",
-     "tickets": "Tickets will be on sale in the Library from 1st July. The subsidised ticket price will be £5 per child (second child in the family £2)"
-    
-},
-  
-  {
-       "title": "Creative Writing Workshop",
-       "start_dttm": "14th September 2021",
-       "html": "This event will be run by Poet and Children’s writer Rachel Piercy her pamphlets - The Flower and the Plough, Rivers Wanted and Disappointing Alice and her new picture book - If you go down to the woods today."
-},
   {
          "title": "National Libraries Week",
          "start_dttm": "October 4th -10th"
   },
   {
          "title": "FoSCL Quiz",
-         "start_dttm": "Friday 8th October",
-         "html": "<p>Friday 8th October in Sonning Common Village Hall</p><p>Our Quiz Masters will be Jill and John Hutchinson and there will be a raffle and of course a bar with wine, beer, soft drinks and nibbles.</p>"
+         "start_dttm": "Friday 15th October",
+         "end_dttm" :"This is a change of date",
+         "html": "<p>Our Quiz Masters will be Jill and John Hutchinson and there will be a raffle and of course a bar with wine, beer, soft drinks and nibbles.</p>"
   },
   {
          "title": "AGM",
          "start_dttm": "15th November at 7pm",
-         "html": "<p>The Agenda will be sent out in October.</p>"
+         "html": "<p>We intend to hold the AGM via Zoom for the second time.</p><p>The Agenda will be sent out in October.</p>"
   },
   {
          "title": "Christmas Celebration",

@@ -15,8 +15,16 @@ var fs = require('fs');
  * Get port etc from config
  */
 
-var port = normalizePort(config.port || '80');
-var sslport = normalizePort(config.sslport || '443');
+var port = '80';
+var sslport = '443';
+
+if ( app.get('env') !== 'production' ) {
+  port = normalizePort(config.port || '80');
+  sslport = normalizePort(config.sslport || '443');
+}
+else{
+  config.log("In PRODUCTION mode");
+}
 
 
 /**
@@ -26,27 +34,29 @@ var sslport = normalizePort(config.sslport || '443');
 var httpServer = http.createServer(app);
 
 /**
- * Create HTTPS server.
+ * Create HTTPS server - if required (ie. if not provided by host!!)
  */
-var startSSL = true;
-try {
-var privatekey = fs.readFileSync(config.ssl.key, 'utf8');
-var certificate = fs.readFileSync(config.ssl.cert, 'utf8');
-} catch(err){// if this happens we must notify webadmin and we mst not try to start ssl
-  startSSL=false;
-  console.log(err);  
-}
-var credentials = {
-  key:  privatekey,
-  cert: certificate
-}; 
-if(config.ssl.passphrase!==undefined) //this should be empty if not required 
-  credentials.passphrase = config.ssl.passphrase;
-  
-var httpsServer
-if(startSSL)
-  httpsServer = https.createServer(credentials, app);
+var startSSL = false;  
 
+if(startSSL){
+  try {
+  var privatekey = fs.readFileSync(config.ssl.key, 'utf8');
+  var certificate = fs.readFileSync(config.ssl.cert, 'utf8');
+  } catch(err){
+    startSSL=false;
+    console.log(err);  
+  }
+  var credentials = {
+    key:  privatekey,
+    cert: certificate
+  }; 
+  if(config.ssl.passphrase!==undefined) //this should be empty if not required 
+    credentials.passphrase = config.ssl.passphrase;
+    
+  var httpsServer
+
+  httpsServer = https.createServer(credentials, app);
+}
 
 /**
  * Listen on provided port, on all network interfaces.
