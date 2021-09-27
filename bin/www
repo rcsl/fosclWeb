@@ -15,15 +15,15 @@ var fs = require('fs');
  * Get port etc from config
  */
 
-var port = '80';
-var sslport = '443';
+var port = 80;
+var sslport = 443;
 
 if ( app.get('env') !== 'production' ) {
   port = normalizePort(config.port || '80');
   sslport = normalizePort(config.sslport || '443');
 }
 else{
-  config.log("In PRODUCTION mode");
+  console.log("In PRODUCTION mode");
 }
 
 
@@ -147,7 +147,7 @@ process.on ('SIGTERM', onGracefulShutdown);
 process.on ('SIGINT', onGracefulShutdown); 
 
 function onReloadConfig(){
-  config.log("Reloading config.js in responce to a user signal");
+  console.log("Reloading config.js in responce to a user signal");
   delete require.cache[require.resolve('config')];
 }
 
