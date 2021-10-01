@@ -18,15 +18,23 @@
   },
   {
          "title": "FoSCL Quiz",
+         "id": "quiz",
          "start_dttm": "Friday 15th October",
          "end_dttm" :"This is a change of date",
          "html": "<p>Our Quiz Masters will be Jill and John Hutchinson and there will be a raffle and of course a bar with wine, beer, soft drinks and nibbles.</p>"
   },
   {
          "title": "AGM",
+         "id" : "agm",
          "start_dttm": "15th November at 7pm",
-         "html": "<p>We intend to hold the AGM via Zoom for the second time.</p><p>The Agenda will be sent out in October.</p>"
+         "html": "<p>The AGM will be held via Zoom for the second time.</p><p>This year three members of the committee will have completed their agreed term of five years and will therefore be resigning.  We would welcome new members on the committee. If you would be willing to stand for election, wish to nominate someone or require more information please contact us via email: <a href='mailto:friendsofsonningcommonlibrary@gmail.com?subject=FoSCL AGM'>friendsofsonningcommonlibrary@gmail.com</a> </p><p>The Agenda will be sent out in October.</p>"
   },
+  {
+       "title": "ZooLab",
+       "id": "zoolab",
+       "start_dttm": "Tuesday 21st December 9:30am",
+       "html": "<p>By popular request Zoolab will be visiting the Library again. Tickets are priced at £5 and will be on sale in November.  Zoolab is suitable for children aged 5-11</p>"
+},
   {
          "title": "Christmas Celebration",
          "start_dttm": "22nd December 2021",
