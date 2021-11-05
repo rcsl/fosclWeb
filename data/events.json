@@ -1,7 +1,6 @@
 {
   "header": "The events we hope to hold in 2021",
   "events": 
-       
     [ 
        {
          "title": "21st Anniversary",
@@ -13,17 +12,6 @@
          "html": "<p>When we hopt to welcome two wonderful Oxfordshire writers,</p> <p>Sylvia Vetta author of Brushstrokes in Time, Not so Black and White</p><p>Loraine Fergusson author of The Angel, A Serpent’s Tooth</p>"
   },
   {
-         "title": "National Libraries Week",
-         "start_dttm": "October 4th -10th"
-  },
-  {
-         "title": "FoSCL Quiz",
-         "id": "quiz",
-         "start_dttm": "Friday 15th October",
-         "end_dttm" :"This is a change of date",
-         "html": "<p>Our Quiz Masters will be Jill and John Hutchinson and there will be a raffle and of course a bar with wine, beer, soft drinks and nibbles.</p>"
-  },
-  {
          "title": "AGM",
          "id" : "agm",
          "start_dttm": "15th November at 7pm",
@@ -33,7 +21,11 @@
        "title": "ZooLab",
        "id": "zoolab",
        "start_dttm": "Tuesday 21st December 9:30am",
-       "html": "<p>By popular request Zoolab will be visiting the Library again. Tickets are priced at £5 and will be on sale in November.  Zoolab is suitable for children aged 5-11</p>"
+       "html": "<p>By popular request Zoolab will be visiting the Library again. The theme this time will be  “Zola the kind hearted Elf” – a Christmas workshop in which children are taken on a journey around the world delivering presents and encountering magical animals along the way. <p>Tickets are priced at £5 and will be on sale in November.  Zoolab is suitable for children aged 5-11</p>"
+}, {
+       "title": "I-Spy Trail",
+       "start_dttm": "Christmas Break",
+       "html": "Committee member Alison Smith will be organising another I-Spy trail for the Christmas holidays – allowing primary aged children to follow a series of clues around Sonning Common in the search for a book title."
 },
   {
          "title": "Christmas Celebration",
