@@ -1,5 +1,15 @@
 [
   {
+    "category": "Events",
+    "items": [
+      {
+        "description": "I-SPY Trail - December 2021",
+        "filename": "ISPY Clues Christmas 21.pdf",
+        "link": "ispy2021"
+      }
+    ]
+  },
+  {
     "category": "Notices and Minutes",
     "items": [
       {
@@ -26,7 +36,12 @@
        "description": "Minutes of AGM - 16th November 2020",
        "filename": "foscl-agm-2020.pdf",
        "link": "agm2020"
-     }
+     },
+     {
+      "description": "Minutes of AGM - 15th November 2021",
+      "filename": "foscl-agm-2021.pdf",
+      "link": "agm2021"
+    }
     ]
   },
   {
