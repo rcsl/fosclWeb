@@ -3,6 +3,7 @@ const router = express.Router();
 const fs = require('fs');
 const config = require('../config.js');
 const pugCompiler = require('../modules/pugCompiler');
+var downloads;
 
 // const { check , validationResult } = require('express-validator');
 
@@ -34,8 +35,8 @@ router.get('/download', function (req, res) {
       res.status(404).send("<br>Resource not found<br/><br/><p><a href='/'>Take me home</a>");
     }
     else {
-      const content = JSON.parse(data.toString());
-      res.render('download', { downloads: content, title: 'Friends of Sonning Common Library - Downloads' });
+      downloads = JSON.parse(data.toString());
+      res.render('download', { downloads: downloads, title: 'Friends of Sonning Common Library - Downloads' });
     }
   });
 
@@ -48,8 +49,19 @@ router.get('/download/:item', function (req, res) {
   var reqLink = req.params['item'];
   var filename;
 
-  downloads.some(cat => {
-    cat.items.some(item => {
+  fs.readFile('./data/download.json', 'utf8', function (err, data) {
+    if (err) {
+      res.status(404).send("<br>Resource not found<br/><br/><p><a href='/'>Take me home</a>");
+      return false;
+    }
+    else {
+      downloads = JSON.parse(data.toString());
+    }
+  });
+
+
+  downloads.forEach(cat => {
+    cat.items.forEach(item => {
       if (item.link === reqLink) {
         filename = item.filename;
         return true;
