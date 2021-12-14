@@ -1,19 +1,17 @@
 {
-  "header": "The events we hope to hold",
+  
   "events": 
-       
     [ 
        {
-              "title": "Christmas I-Spy Trail",
-              "id": "ispy",
-              "start_dttm": "December 2021",
-              "html": "<p>Follow the clues around Sonning Common in the search for a book title. Suitable for primary aged children.</p><p>Click to <a href='download/ispy2021'>download your I-SPY Trail Clues.</a></p>"
+              "title": "I-Spy Trail",
+              "start_dttm": "Christmas Break",
+              "html": "Alison Smith will be organising another I-Spy trail for the Christmas holidays - allowing primary aged children to follow a series of clues around Sonning Common in the search for a book title.<br>Click here to <a href='download/ispy2021'>download the clues.</a>"
        },
   {
        "title": "ZooLab",
        "id": "zoolab",
        "start_dttm": "Tuesday 21st December 9:30am",
-       "html": "<p>By popular request Zoolab will be visiting the Library again.</p><p>The theme this time will be  “Zola the kind hearted Elf” – a Christmas workshop in which children are taken on a journey around the world delivering presents and encountering magical animals along the way.</p><p>Tickets are priced at £5 and will be on sale in November.  Zoolab is suitable for children aged 5-11</p>"
+       "html": "<p>By popular request Zoolab will be visiting the Library again. The theme this time will be  “Zola the kind hearted Elf” - a Christmas workshop in which children are taken on a journey around the world delivering presents and encountering magical animals along the way. <p>Tickets are priced at £5 and will be on sale in November.  Zoolab is suitable for children aged 5-11</p>"
 },
   {
          "title": "Christmas Celebration",

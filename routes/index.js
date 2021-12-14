@@ -11,8 +11,6 @@ const assert = require('assert');
 const request = require('request');
 
 
-
-
 /* GET home page. */
 router.get('/', function (req, res, next) {
   res.render('index', { title: 'Friends of Sonning Common Library' });
@@ -56,28 +54,29 @@ router.get('/download/:item', function (req, res) {
     }
     else {
       downloads = JSON.parse(data.toString());
+      downloads.forEach(cat => {
+        cat.items.forEach(item => {
+          if (item.link === reqLink) {
+            filename = item.filename;
+            return true;
+          }
+        });
+        return (typeof filename !== 'undefined');
+      });
+      if (typeof filename !== 'undefined') {
+        res.download(path + filename, function (err) {
+          if (err)
+            res.status(404).render('download404.pug', { title: 'Friends of Sonning Common Library - Downloads', link: reqLink });
+        });
+      }
+      else {
+        res.status(404).render('download404.pug', { title: 'Friends of Sonning Common Library - Downloads', link: reqLink });
+      }
     }
   });
 
 
-  downloads.forEach(cat => {
-    cat.items.forEach(item => {
-      if (item.link === reqLink) {
-        filename = item.filename;
-        return true;
-      }
-    });
-    return (typeof filename !== 'undefined');
-  });
-  if (typeof filename !== 'undefined') {
-    res.download(path + filename, function (err) {
-      if (err)
-        res.status(404).render('download404.pug', { title: 'Friends of Sonning Common Library - Downloads', link: reqLink });
-    });
-  }
-  else {
-    res.status(404).render('download404.pug', { title: 'Friends of Sonning Common Library - Downloads', link: reqLink });
-  }
+
 });
 
 router.get('/events', function (req, res, next) {
