@@ -54,6 +54,14 @@ router.get('/download/:item', function (req, res) {
     }
     else {
       downloads = JSON.parse(data.toString());
+      downloads.some(cat=> {
+        return (cat.items.some(item =>{
+          if(item.link === reqLink)
+            return(filename = item.filename);
+        }));
+      });
+
+      /*
       downloads.forEach(cat => {
         cat.items.forEach(item => {
           if (item.link === reqLink) {
@@ -62,7 +70,7 @@ router.get('/download/:item', function (req, res) {
           }
         });
         return (typeof filename !== 'undefined');
-      });
+      });*/
       if (typeof filename !== 'undefined') {
         res.download(path + filename, function (err) {
           if (err)
