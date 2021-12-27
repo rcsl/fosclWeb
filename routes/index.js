@@ -49,7 +49,7 @@ router.get('/download/:item', function (req, res) {
 
   fs.readFile('./data/download.json', 'utf8', function (err, data) {
     if (err) {
-      res.status(404).send("<br>Resource not found<br/><br/><p><a href='/'>Take me home</a>");
+      res.status(404).send("<br>Opps! Looks like something is not quite right. Resource not found<br/><br/><p><a href='/'>Take me home</a>");
       return false;
     }
     else {
