@@ -1,0 +1,157 @@
+[
+  {
+    "id": 1,
+    "name": "Alzheimer's Research UK",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/12b38310-e360-11e8-b06f-09d6f9f87112.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Salvation Army",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/32f49c53-eb2c-11e8-adb6-69f4c2c1dcc9.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Mind",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/37a57f9a-2d08-11e6-bce7-6ff134176666.jpg"
+  },
+  {
+    "id": 4,
+    "name": "London Air Ambulance",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/3c7aaaaa-bf0e-11e9-945a-cdf15d1a7512.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Parkinson's UK",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/3e58ee81-2d09-11e6-9dc6-455dca91e85a.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Children in Need",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/3f41ea3e-eb2d-11e8-b06f-09d6f9f87112.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Dogs Trust",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/42f9d602-2d03-11e6-9dc6-455dca91e85a.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Cancer Research UK",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/4dec622a-eb23-11e8-adb6-69f4c2c1dcc9.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Great Ormond Street",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/536901ca-c363-11e9-945a-cdf15d1a7512.jpg?pw=70"
+  },
+  {
+    "id": 10,
+    "name": "WWF",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/5882393e-2d0e-11e6-a4bd-71dbf5f2854a.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Alzheimer's Society",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/689a1013-eb2e-11e8-b06f-09d6f9f87112.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Dementia Uk",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/6e36c405-8684-11eb-bfc0-6fff305e3931.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Samaritans",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/75820f26-722b-11eb-bcf8-cf535918bcc9.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Royal British legion",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/80e430ca-2d0a-11e6-a4bd-71dbf5f2854a.jpg"
+  },
+  {
+    "id": 15,
+    "name": "British Red Cross",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/84a4d130-2d01-11e6-8926-c9184f6a64c4.jpg"
+  },
+  {
+    "id": 16,
+    "name": "British Heart Foundation",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/84a9dac3-2d01-11e6-8fa2-87887d182df9.jpg"
+  },
+  {
+    "id": 17,
+    "name": "RSPCA",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/8560df36-2d0a-11e6-8926-c9184f6a64c4.jpg"
+  },
+  {
+    "id": 18,
+    "name": "RSPB",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/8570be00-2d0a-11e6-a4bd-71dbf5f2854a.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Help for Heroes",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/873f3c06-44ad-11e9-b94b-31184eb49355.jpg"
+  },
+  {
+    "id": 20,
+    "name": "National trust",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/931d548f-2d08-11e6-bce7-6ff134176666.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Guide Dogs",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/9d8b879e-eb2e-11e8-8247-3fceb0865f28.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Keep Britain Tidy",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/b278709b-2d06-11e6-9570-cf1c514d3e57.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Marie Curie",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/b2841429-2d07-11e6-a4bd-71dbf5f2854a.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Save the Children",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/bf51555d-2d0a-11e6-bce7-6ff134176666.jpg"
+  },
+  {
+    "id": 25,
+    "name": "RNLI",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/c028b711-2d0c-11e6-8fa2-87887d182df9.jpg"
+  },
+  {
+    "id": 26,
+    "name": "NSPCC",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/c89b80fd-eb2d-11e8-8352-9bed441dd0c0.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Battersea Dogs and Cats Home",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/cd4d7b3f-d8fe-11e8-b546-8b6c166af0e5.jpg"
+  },
+  {
+    "id": 28,
+    "name": "St John Ambulance",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/d5a8ea3c-eb2e-11e8-adb6-69f4c2c1dcc9.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Prostate Cancer UK",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/df467173-2d09-11e6-bce7-6ff134176666.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Duke of Edinburgh Awards",
+    "path": "https://d3hjzzsa8cr26l.cloudfront.net/e7847f77-bb53-11e8-a63c-8777600888f8.jpg"
+  },
+  {
+    "id": 31,
+    "name": "Alzheimer's Association",
+    "path": ""
+  }
+]
