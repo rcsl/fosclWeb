@@ -1,21 +1,25 @@
 {
   "events": 
     [ 
-       {
-              "title": "I-Spy Trail",
-              "start_dttm": "Easter 2022",
-              "html": "Search out the clues in our Christmas I-Spy trail. Suitable for primary aged children to follow a series of clues around Sonning Common in the search for a book title.<br>Click here to <a href='/download/ispy2022'>download the clues.</a>"
-       },
-  {
-       "title": "ZooLab",
-       "id": "zoolab",
-       "start_dttm": "Tuesday 22nd February 2022 : 11am",
-       "html": "<h2 style='color:tomato;'>EVENT POSTPONED -- NEW DATE</h2><p>By popular request Zoolab will be visiting the Library again.</p><p>Tickets are priced at £5 and will be on sale in November.  Zoolab is suitable for children aged 5-11</p>"
+{
+       "title": "Women With Wings",
+       "start_dttm": "Monday 13th June at 7pm",
+       "html": "Women With Wings a talk by Carolyn Kirby about her book &apos;When We Fly&apos;.<p>Tickets £5 to include a glass of wine or soft drink."
 },
-  {
-         "title": "Christmas Celebration",
-         "start_dttm": "22nd December 2021",
-         "html": "<p>Do come and join us in the Library on Wednesday 22nd December from 2.30 pm.</p>"
-  }
+{
+       "title": "Zoolab",
+       "start_dttm": "Wednesday 27th July  at 11am",
+       "html": " ZooLab returns by popular demand.<p>Tickets are £5 per child."
+},
+{
+       "title": "Lego Master Builders",
+       "start_dttm": "Wednesday 3rd August at 9:30am",
+       "html": "Lego Master Builders returns.<p>Tickets are £5 per child."
+},           
+{
+       "title": "Zoolab",
+       "start_dttm": "Tuesday 25th October at 11am",
+       "html": "ZooLab returns.  Tickets will be available in September."
+}
     ]
 }
