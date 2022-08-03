@@ -4,7 +4,7 @@
 {
        "title": "The Big Bear Hunt",
        "start_dttm": "Thoughout August 2022",
-       "html": "Look for bears the bears that are hidden around the village. <br>#[a(href='/download/foscl-bear-hunt-2022') Download instructions and our map here]."
+       "html": "Look for bears the bears that are hidden around the village. <br><a href='/download/foscl-bear-hunt-2022'>Download instructions and a map here</a>."
 },
 {
        "title": "Annual Quiz",
